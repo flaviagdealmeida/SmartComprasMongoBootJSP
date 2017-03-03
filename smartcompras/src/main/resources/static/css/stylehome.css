@@ -1,0 +1,162 @@
+body{
+	background-image: url("../img/home/fundos.jpg");
+	width:100%;
+}
+
+.container{
+	
+	background-color: white;
+	margin-top: 2%;
+}
+
+.banner{
+	margin-top: 2%;
+	text-align: center;
+	background-color: #f0830e;
+	padding: 1%;	
+	color:white;
+}
+#login{
+
+	float: right;
+	margin-right: 1em;
+}
+
+.graf{
+	
+	padding: 0.5%;
+}
+
+#btnsistema{
+	float: right;
+	
+}
+
+.carousel{ 
+      width: 100%;
+	  margin-top:-2%;
+	  height: 100%;
+  }
+#menu{
+	  margin: 0;
+	  border-bottom: 4px solid orange;
+ }
+ 
+ .cadastro {
+ 
+ 	max-width: 45%;
+ 	margin-top: 3%;
+ 	margin-left: 25%;
+ 	margin-bottom: 3%;
+ }
+
+#cad{
+	margin-left: 10%;
+}
+
+.col-sm-4 img{ 
+	padding: 0.5%;
+	max-width: 95%;
+	margin-left: 1.7%;
+
+}
+
+.topo{
+	margin-top: 2%;
+	background-color: #1C1C1C;
+	color: white;
+}
+
+.banner img{
+	
+	max-width: 100%;
+}
+
+.col-sm-6 p{
+	font-size: 2em;
+	text-align: justify;
+}
+
+.col-sm-6 h3{
+	font-size: 3em;
+	text-align: right;
+}
+
+.col-sm-6 img{
+	max-width: 100%;
+	max-height: 100%;
+
+}
+
+#postit img{ 
+	max-width: 75%;
+
+ }
+
+.redes-sociais{
+	margin-right: 2%;
+	position: rigth;
+}
+.rodape{
+	background-color: #1C1C1C;
+	margin-top: 2%;
+	padding: 3%;
+
+}
+.rodape ul {
+	color: white;
+	list-style:none;	
+	float:left;
+	overflow:hidden;
+	
+}
+.rodape ul li { 
+	display: inline; 
+	padding:0.7em;
+	margin:0.7em;
+}
+
+
+.rodape ul a , .redes-sociais a{ 
+	color: #828282;
+	
+}
+
+.rodape a:hover{
+	color: white;
+	list-style:none;
+
+}
+
+.redes-sociais{
+	margin-right:1em;
+	
+}
+
+#navhome{
+	margin-right:5%;
+	width: 700px;
+}
+.login{
+	font-size: 8px;	
+}
+
+.row{
+	margin-top:5%;
+
+}
+.texto{
+	margin-left: 15%;
+}
+
+.cadastro legend{
+	
+	font-size: 2em;
+	
+}
+
+.fa{
+	padding-right: 2%;
+.navbar-right li{
+	margin-right:1%;
+}
