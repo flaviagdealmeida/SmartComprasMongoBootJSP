@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -29,33 +29,33 @@
 			<b>O SmartCompras</b>
 		</h2>
 		<blockquote>
-			<p>SmartCompras È uma soluÁ„o em que o usu·rio busca sua lista de
-				compras (personalizada; favoritos ou prÈ-definida; sugest„o do
-				software), levando em consideraÁ„o a sua localizaÁ„o, proporcionado
-				a escolha do mesmo ir atÈ o mercado mais prÛximo ou o que tem a
+			<p>SmartCompras √© uma solu√ß√£o em que o usu√°rio busca sua lista de
+				compras (personalizada; favoritos ou pr√©-definida; sugest√£o do
+				software), levando em considera√ß√£o a sua localiza√ß√£o, proporcionado
+				a escolha do mesmo ir at√© o mercado mais pr√≥ximo ou o que tem a
 				melhor oferta.</p>
 
-			<p>A proposta do SmartCompras È que independentemente do tamanho
-				da sua lista de mercado, vocÍ possa ter opÁ„o de escolha de onde
-				fazer suas compras. Como sugest„o temos dois caminhos: O que oferece
-				o melhor preÁo e tambÈm o que È mais prÛximo. Assim, fica a seu
-				critÈrio escolher onde efetivar suas compras.</p>
+			<p>A proposta do SmartCompras √© que independentemente do tamanho
+				da sua lista de mercado, voc√™ possa ter op√ß√£o de escolha de onde
+				fazer suas compras. Como sugest√£o temos dois caminhos: O que oferece
+				o melhor pre√ßo e tamb√©m o que √© mais pr√≥ximo. Assim, fica a seu
+				crit√©rio escolher onde efetivar suas compras.</p>
 
-			<p>A soluÁ„o baseia-se em um sistema que funcionar· via
-				computador, tablet e/ou celular, onde o usu·rio crie uma conta com
+			<p>A solu√ß√£o baseia-se em um sistema que funcionar√° via
+				computador, tablet e/ou celular, onde o usu√°rio crie uma conta com
 				uma lista de produtos que costuma comprar todos os meses (lista de
-				mercado) ou com listas disponibilizadas no prÛprio site, como por
-				exemplo, churrasco, almoÁo ou festa e a partir dessas escolhas o
-				sistema faÁa sua busca os melhores preÁos ou indique onde comprar os
-				produtos, levando em consideraÁ„o a localizaÁ„o do usu·rio.</p>
+				mercado) ou com listas disponibilizadas no pr√≥prio site, como por
+				exemplo, churrasco, almo√ßo ou festa e a partir dessas escolhas o
+				sistema fa√ßa sua busca os melhores pre√ßos ou indique onde comprar os
+				produtos, levando em considera√ß√£o a localiza√ß√£o do usu√°rio.</p>
 
 
 
-			<p>H· tambÈm a possibilidade de compartilhar a lista com os
-				amigos atravÈs de redes sociais ou e-mail.</p>
+			<p>H√° tamb√©m a possibilidade de compartilhar a lista com os
+				amigos atrav√©s de redes sociais ou e-mail.</p>
 
-			<p>Para acompanhamento dos gastos, os usu·rios contar„o com
-				gr·ficos gerados a partir das buscas realizadas, assim tambÈm poder·
+			<p>Para acompanhamento dos gastos, os usu√°rios contar√£o com
+				gr√°ficos gerados a partir das buscas realizadas, assim tamb√©m poder√°
 				fazer um planejamento financeiro para meses subsequentes.</p>
 		</blockquote>
 		<small>SmartGroup <cite title="SmartGroup">SmartGroup</cite></small>

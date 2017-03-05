@@ -1,8 +1,16 @@
 package br.org.smartcompras.repository;
 
-//public interface ListasComprasRepository extends CrudRepository<Lista, String> {
+import java.util.List;
+
+import org.springframework.data.repository.CrudRepository;
+
+import br.org.smartcompras.models.Lista;
+
+public interface ListasComprasRepository extends CrudRepository<Lista, String> {
+
+	
 
 	
 	
 	
-//}
+}

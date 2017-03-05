@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -28,10 +28,10 @@
 			<div class="col-lg-2">
 				<img class="img-circle" src="img/equipe/Eu.jpg" alt="Flavia Almeida"
 					width="160" height="160" />
-				<h2>Fl·via Almeida</h2>
+				<h2>Fl√°via Almeida</h2>
 				<div class="panel">
 					<p>
-						Tecnologia em Inform·tica pela UniverCidade<br /> MBA em Analise
+						Tecnologia em Inform√°tica pela UniverCidade<br /> MBA em Analise
 						de Sistemas com Gerenciamento de Projetos pela Unigranrio<br />
 						Discente de Engenharia de Software com Java pela Faculdade Senac
 						Rio<br /> Atualmente Docente do Senac Rio
@@ -48,9 +48,9 @@
 				</h2>
 				<div class="panel">
 					<p>
-						Sistemas da InformaÁ„o pela Unigranrio<br /> Discente de
+						Sistemas da Informa√ß√£o pela Unigranrio<br /> Discente de
 						Engenharia de Software com Java pela Faculdade Senac Rio<br />
-						Atualmente Analista de Sistemas na Novo Horizonte Jacarepagu· Imp
+						Atualmente Analista de Sistemas na Novo Horizonte Jacarepagu√° Imp
 						e Exp Ltda.
 					</p>
 				</div>
@@ -62,10 +62,10 @@
 				<h2>Renato Galindo</h2>
 				<div class="panel">
 					<p>
-						Analise e Desenvolvimento de Sistemas pela Est·cio <br />
+						Analise e Desenvolvimento de Sistemas pela Est√°cio <br />
 						Discente de Engenharia de Software com Java pela Faculdade Senac
-						Rio<br /> Foi colaborador na Petrobr·s, Administrador de
-						Sistemas, Coordenador de Suporte e Consultor TÈcnico
+						Rio<br /> Foi colaborador na Petrobr√°s, Administrador de
+						Sistemas, Coordenador de Suporte e Consultor T√©cnico
 					</p>
 				</div>
 
@@ -80,7 +80,7 @@
 				<h2>Edilson Oliveira</h2>
 				<div class="panel">
 					<p>
-						Sistemas da InformaÁ„o pela FIJ<br /> Discente de Engenharia de
+						Sistemas da Informa√ß√£o pela FIJ<br /> Discente de Engenharia de
 						Software com Java pela Faculdade Senac Rio<br /> Adminstrador de
 						Sistemas Solaris pela BB Tecnologia Atualmente DBA na BB
 						Tecnologia
@@ -99,10 +99,10 @@
 				<h2>Felipe Marinho</h2>
 				<div class="panel">
 					<p>
-						Sistema de InformaÁ„o pela Universidade IguaÁu<br /> Discente de
+						Sistema de Informa√ß√£o pela Universidade Igua√ßu<br /> Discente de
 						Engenharia de Software com Java pela Faculdade Senac Rio<br />
-						ExperÍncia profissional de 15 anos em An·lise de Sistemas <br />
-						Atualmente Analista de Sistemas na Secretaria Estadual de Sa˙de
+						Exper√™ncia profissional de 15 anos em An√°lise de Sistemas <br />
+						Atualmente Analista de Sistemas na Secretaria Estadual de Sa√∫de
 					</p>
 				</div>
 

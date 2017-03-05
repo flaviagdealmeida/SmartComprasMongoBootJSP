@@ -78,8 +78,8 @@ public class SistemaController {
 		return "marca";
 	}
 
-	@RequestMapping("listaproduto2")
-	public String listaproduto2() {
-		return "listaproduto2";
+	@RequestMapping("listamarca2")
+	public String listamarca2() {
+		return "listamarca2";
 	}
 }

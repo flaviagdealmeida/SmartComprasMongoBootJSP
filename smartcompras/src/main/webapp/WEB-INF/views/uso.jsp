@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -19,14 +19,14 @@
 			<h2>O SmartCompras</h2>
 		</div>
 		<h2>
-			<b>PolÌtica e Privacidade</b>
+			<b>Pol√≠tica e Privacidade</b>
 		</h2>
 		<blockquote id="privacidade">
-			<p>Todos os direitos reservados. … proibida a reproduÁ„o do
-				conte˙do desta p·gina em qualquer meio de comunicaÁ„o sem
-				autorizaÁ„o por escrito. A equipe do SmartCompras se compromete a
-				n„o repassar e-mails cadastrados a partir de qualquer p·gina do site
-				a terceiros sem prÈvia autorizaÁ„o.</p>
+			<p>Todos os direitos reservados. √â proibida a reprodu√ß√£o do
+				conte√∫do desta p√°gina em qualquer meio de comunica√ß√£o sem
+				autoriza√ß√£o por escrito. A equipe do SmartCompras se compromete a
+				n√£o repassar e-mails cadastrados a partir de qualquer p√°gina do site
+				a terceiros sem pr√©via autoriza√ß√£o.</p>
 		</blockquote>
 
 
@@ -36,150 +36,150 @@
 		</h2>
 		<blockquote>
 
-			<p>O SmartCompras È um serviÁo interativo oferecido em por meio
-				de p·gina eletrÙnica na internet que oferece busca de lista de
-				produtos atravÈs de sua localizaÁ„o a partir da integraÁ„o de
-				diversas fontes de informaÁ„o. O acesso ao SmartCompras representa a
-				aceitaÁ„o expressa e irrestrita dos termos de uso abaixo descritos.
-				Se vocÍ n„o concorda com os termos, por favor, n„o acesse nem
+			<p>O SmartCompras √© um servi√ßo interativo oferecido em por meio
+				de p√°gina eletr√¥nica na internet que oferece busca de lista de
+				produtos atrav√©s de sua localiza√ß√£o a partir da integra√ß√£o de
+				diversas fontes de informa√ß√£o. O acesso ao SmartCompras representa a
+				aceita√ß√£o expressa e irrestrita dos termos de uso abaixo descritos.
+				Se voc√™ n√£o concorda com os termos, por favor, n√£o acesse nem
 				utilize este website.</p>
 			<p>
-				O visitante poder· usar este site apenas para finalidades lÌcitas.
-				Este espaÁo n„o poder· ser utilizado para para publicar, enviar,
-				distribuir ou divulgar conte˙dos ou informaÁ„o de car·ter
-				difamatÛrio, obsceno ou ilÌcito, inclusive informaÁıes de
+				O visitante poder√° usar este site apenas para finalidades l√≠citas.
+				Este espa√ßo n√£o poder√° ser utilizado para para publicar, enviar,
+				distribuir ou divulgar conte√∫dos ou informa√ß√£o de car√°ter
+				difamat√≥rio, obsceno ou il√≠cito, inclusive informa√ß√µes de
 				propriedade exclusiva pertencentes a outras pessoas ou empresas, bem
-				como marcas registradas ou informaÁıes protegidas por direitos
-				autorais, sem a expressa autorizaÁ„o do detentor desses direitos.
-				Ainda, o visitante n„o poder· usar o site SmartCompras para obter ou
-				divulgar informaÁıes pessoais, inclusive endereÁos na Internet,
-				sobre os usu·rios do site.<br /> O SmartCompras empenha-se em
-				manter a qualidade, atualidade e autenticidade das informaÁıes do
-				site, mas seus criadores e colaboradores n„o se responsabilizam por
-				eventuais falhas nos serviÁos ou inexatid„o das informaÁıes
-				oferecidas. O usu·rio n„o deve ter como pressuposto que tais
-				serviÁos e informaÁıes s„o isentos de erros ou ser„o adequados aos
+				como marcas registradas ou informa√ß√µes protegidas por direitos
+				autorais, sem a expressa autoriza√ß√£o do detentor desses direitos.
+				Ainda, o visitante n√£o poder√° usar o site SmartCompras para obter ou
+				divulgar informa√ß√µes pessoais, inclusive endere√ßos na Internet,
+				sobre os usu√°rios do site.<br /> O SmartCompras empenha-se em
+				manter a qualidade, atualidade e autenticidade das informa√ß√µes do
+				site, mas seus criadores e colaboradores n√£o se responsabilizam por
+				eventuais falhas nos servi√ßos ou inexatid√£o das informa√ß√µes
+				oferecidas. O usu√°rio n√£o deve ter como pressuposto que tais
+				servi√ßos e informa√ß√µes s√£o isentos de erros ou ser√£o adequados aos
 				seus objetivos particulares. Os criadores e colaboradores tampouco
-				assumem o compromisso de atualizar as informaÁıes, e reservam-se o
-				direito de alterar as condiÁıes de uso ou preÁos dos serviÁos e
+				assumem o compromisso de atualizar as informa√ß√µes, e reservam-se o
+				direito de alterar as condi√ß√µes de uso ou pre√ßos dos servi√ßos e
 				produtos oferecidos no site a qualquer momento. <br /> O acesso ao
-				site È gratuito. O SmartCompras poder· criar ·reas de acesso
+				site √© gratuito. O SmartCompras poder√° criar √°reas de acesso
 				exclusivo aos seus clientes ou para terceiros especialmente
-				autorizados. Os criadores e colaboradores do site poder„o a seu
-				exclusivo critÈrio e em qualquer tempo, modificar ou desativar o
+				autorizados. Os criadores e colaboradores do site poder√£o a seu
+				exclusivo crit√©rio e em qualquer tempo, modificar ou desativar o
 				site, bem como limitar, cancelar ou suspender seu uso ou o acesso.
-				TambÈm estes Termos de Uso poder„o ser alterados a qualquer tempo.
-				Visite regularmente esta p·gina e consulte os Termos ent„o vigentes.
-				Algumas disposiÁıes destes Termos podem ser substituÌdas por termos
-				ou avisos legais expressos localizados em determinadas p·ginas deste
+				Tamb√©m estes Termos de Uso poder√£o ser alterados a qualquer tempo.
+				Visite regularmente esta p√°gina e consulte os Termos ent√£o vigentes.
+				Algumas disposi√ß√µes destes Termos podem ser substitu√≠das por termos
+				ou avisos legais expressos localizados em determinadas p√°ginas deste
 				site.
 			</p>
 			<h3>Erros e falhas</h3>
 
-			<p>Os documentos, informaÁıes, imagens e gr·ficos publicados
-				neste site podem conter imprecisıes tÈcnicas ou erros tipogr·ficos.
-				Em nenhuma hipÛtese o SmartCompras e/ou seus respectivos
-				fornecedores ser„o respons·veis por qualquer dano direto ou indireto
+			<p>Os documentos, informa√ß√µes, imagens e gr√°ficos publicados
+				neste site podem conter imprecis√µes t√©cnicas ou erros tipogr√°ficos.
+				Em nenhuma hip√≥tese o SmartCompras e/ou seus respectivos
+				fornecedores ser√£o respons√°veis por qualquer dano direto ou indireto
 				decorrente da impossibilidade de uso, perda de dados ou lucros,
-				resultante do acesso e desempenho do site, dos serviÁos oferecidos
-				ou de informaÁıes disponÌveis neste site. O acesso aos serviÁos,
-				materiais, informaÁıes e facilidades contidas neste website n„o
+				resultante do acesso e desempenho do site, dos servi√ßos oferecidos
+				ou de informa√ß√µes dispon√≠veis neste site. O acesso aos servi√ßos,
+				materiais, informa√ß√µes e facilidades contidas neste website n√£o
 				garante a sua qualidade.</p>
 
-			<h3>LimitaÁ„o da responsabilidade</h3>
+			<h3>Limita√ß√£o da responsabilidade</h3>
 
-			<p>Os materiais s„o fornecidos neste website sem nenhuma garantia
-				explÌcita ou implÌcita de comercializaÁ„o ou adequaÁ„o a qualquer
-				objetivo especÌfico. Em nenhum caso o SmartCompras ou os seus
-				colaboradores ser„o responsabilizados por quaisquer danos, incluindo
-				lucros cessantes, interrupÁ„o de negÛcio, ou perda de informaÁ„o que
+			<p>Os materiais s√£o fornecidos neste website sem nenhuma garantia
+				expl√≠cita ou impl√≠cita de comercializa√ß√£o ou adequa√ß√£o a qualquer
+				objetivo espec√≠fico. Em nenhum caso o SmartCompras ou os seus
+				colaboradores ser√£o responsabilizados por quaisquer danos, incluindo
+				lucros cessantes, interrup√ß√£o de neg√≥cio, ou perda de informa√ß√£o que
 				resultem do uso ou da incapacidade de usar os materiais. O
-				SmartCompras n„o garante a precis„o ou integridade das informaÁıes,
-				textos, gr·ficos, links e outros itens dos materiais. O SmartCompras
-				n„o se responsabiliza pelo conte˙do dos artigos e informaÁıes aqui
-				publicadas, uma vez que os textos s„o de autoria de terceiros e n„o
-				traduzem, necessariamente, a opini„o do website. O SmartCompras
-				tampouco È respons·vel pela violaÁ„o de direitos autorais decorrente
-				de informaÁıes, documentos e materiais publicados neste website,
-				compromentendo-se a retir·-los do ar assim que notificado da
-				infraÁ„o.</p>
-			<h3>InformaÁıes enviadas pelos usu·rios e colaboradores</h3>
+				SmartCompras n√£o garante a precis√£o ou integridade das informa√ß√µes,
+				textos, gr√°ficos, links e outros itens dos materiais. O SmartCompras
+				n√£o se responsabiliza pelo conte√∫do dos artigos e informa√ß√µes aqui
+				publicadas, uma vez que os textos s√£o de autoria de terceiros e n√£o
+				traduzem, necessariamente, a opini√£o do website. O SmartCompras
+				tampouco √© respons√°vel pela viola√ß√£o de direitos autorais decorrente
+				de informa√ß√µes, documentos e materiais publicados neste website,
+				compromentendo-se a retir√°-los do ar assim que notificado da
+				infra√ß√£o.</p>
+			<h3>Informa√ß√µes enviadas pelos usu√°rios e colaboradores</h3>
 			<p>
-				Qualquer material, informaÁ„o, artigos ou outras comunicaÁıes que
-				forem transmitidas, enviadas ou publicadas neste site ser„o
-				considerados informaÁ„o n„o confidencial, e qualquer violaÁ„o aos
-				direitos dos seus criadores n„o ser· de responsabilidade do
-				SmartCompras … terminantemente proibido transmitir, trocar ou
-				publicar, atravÈs deste website, qualquer material de cunho obsceno,
-				difamatÛrio ou ilegal, bem como textos ou criaÁıes de terceiros sem
-				a autorizaÁ„o do autor. O SmartCompras reserva-se o direito de
-				restringir o acesso ‡s informaÁıes enviadas por terceiros aos seus
-				usu·rios. <br /> O SmartCompras poder·, mas n„o È obrigado, a
-				monitorar, revistar e restringir o acesso a qualquer ·rea no site
-				onde usu·rios transmitem e trocam informaÁıes entre si, incluindo,
-				mas n„o limitado a, salas de chat, centro de mensagens ou outros
+				Qualquer material, informa√ß√£o, artigos ou outras comunica√ß√µes que
+				forem transmitidas, enviadas ou publicadas neste site ser√£o
+				considerados informa√ß√£o n√£o confidencial, e qualquer viola√ß√£o aos
+				direitos dos seus criadores n√£o ser√° de responsabilidade do
+				SmartCompras √â terminantemente proibido transmitir, trocar ou
+				publicar, atrav√©s deste website, qualquer material de cunho obsceno,
+				difamat√≥rio ou ilegal, bem como textos ou cria√ß√µes de terceiros sem
+				a autoriza√ß√£o do autor. O SmartCompras reserva-se o direito de
+				restringir o acesso √†s informa√ß√µes enviadas por terceiros aos seus
+				usu√°rios. <br /> O SmartCompras poder√°, mas n√£o √© obrigado, a
+				monitorar, revistar e restringir o acesso a qualquer √°rea no site
+				onde usu√°rios transmitem e trocam informa√ß√µes entre si, incluindo,
+				mas n√£o limitado a, salas de chat, centro de mensagens ou outros
 				foruns de debates, podendo retirar do ar ou retirar o acesso a
-				qualquer destas informaÁıes ou comunicaÁıes. PorÈm, o SmartCompras
-				n„o È respons·vel pelo conte˙do de qualquer uma das informaÁıes
-				trocadas entre os usu·rios, sejam elas lÌcitas ou ilÌcitas.
+				qualquer destas informa√ß√µes ou comunica√ß√µes. Por√©m, o SmartCompras
+				n√£o √© respons√°vel pelo conte√∫do de qualquer uma das informa√ß√µes
+				trocadas entre os usu√°rios, sejam elas l√≠citas ou il√≠citas.
 			</p>
 			<h3>Links para sites de terceiros</h3>
-			<p>Os sites apontados n„o est„o sob o controle do SmartCompras
-				que n„o È respons·vel pelo conte˙do de qualquer outro website
+			<p>Os sites apontados n√£o est√£o sob o controle do SmartCompras
+				que n√£o √© respons√°vel pelo conte√∫do de qualquer outro website
 				indicado ou acessado por meio do SmartCompras reserva-se o direito
 				de eliminar qualquer link ou direcionamento a outros sites ou
-				serviÁos a qualquer momento. O SmartCompras n„o endossa firmas ou
-				produtos indicados, acessados ou divulgados atravÈs deste website,
-				tampouco pelos an˙ncios aqui publicados, reservando-sese o direito
-				de publicar este alerta em suas p·ginas eletrÙnicas sempre que
-				considerar necess·rio.</p>
+				servi√ßos a qualquer momento. O SmartCompras n√£o endossa firmas ou
+				produtos indicados, acessados ou divulgados atrav√©s deste website,
+				tampouco pelos an√∫ncios aqui publicados, reservando-sese o direito
+				de publicar este alerta em suas p√°ginas eletr√¥nicas sempre que
+				considerar necess√°rio.</p>
 
 			<h3>Direitos autorais e propriedade intelectual</h3>
 
 			<p>
-				Os documentos, conte˙dos e criaÁıes contidos neste website pertencem
-				aos seus criadores e colaboradores. A autoria dos conte˙do, material
-				e imagens exibidos no site È protegida por leis nacionais e
-				internacionais. N„o podem ser copiados, reproduzidos, modificados,
-				publicados, atualizados, postados, transmitidos ou distribuÌdos de
-				qualquer maneira sem autorizaÁ„o prÈvia e por escrito do
-				SmartCompras.<br /> As imagens contidas neste website s„o aqui
-				incorporadas apenas para fins de visualizaÁ„o, e, salvo autorizaÁ„o
-				expressa por escrito, n„o podem ser gravadas ou baixadas via
-				download. A reproduÁ„o ou armazenamento de materiais recuperados a
-				partir deste serviÁo sujeitar· os infratores ‡s penas da lei.<br />
-				O nome do site SmartCompras, seu logotipo, o nome de domÌnio para
-				acesso na Internet, bem como todos os elementos caracterÌsticos da
+				Os documentos, conte√∫dos e cria√ß√µes contidos neste website pertencem
+				aos seus criadores e colaboradores. A autoria dos conte√∫do, material
+				e imagens exibidos no site √© protegida por leis nacionais e
+				internacionais. N√£o podem ser copiados, reproduzidos, modificados,
+				publicados, atualizados, postados, transmitidos ou distribu√≠dos de
+				qualquer maneira sem autoriza√ß√£o pr√©via e por escrito do
+				SmartCompras.<br /> As imagens contidas neste website s√£o aqui
+				incorporadas apenas para fins de visualiza√ß√£o, e, salvo autoriza√ß√£o
+				expressa por escrito, n√£o podem ser gravadas ou baixadas via
+				download. A reprodu√ß√£o ou armazenamento de materiais recuperados a
+				partir deste servi√ßo sujeitar√° os infratores √†s penas da lei.<br />
+				O nome do site SmartCompras, seu logotipo, o nome de dom√≠nio para
+				acesso na Internet, bem como todos os elementos caracter√≠sticos da
 				tecnologia desenvolvida e aqui apresentada, sob a forma da
-				articulaÁ„o de bases de dados, constituem marcas registradas e
+				articula√ß√£o de bases de dados, constituem marcas registradas e
 				propriedades intelectuais privadas e todos os direitos decorrentes
-				de seu registro s„o assegurados por lei. Alguns direitos de uso
-				podem ser cedidos por terceiros em contrato ou licenÁa especial, que
-				pode ser cancelada a qualquer momento se n„o cumpridos os seus
-				termos. <br /> As marcas registradas do SmartCompras sÛ podem ser
-				usadas publicamente com autorizaÁ„o expressa. O uso destas marcas
-				registradas em publicidade e promoÁ„o de produtos deve ser
-				adequadamente informado.<br /> ReclamaÁıes sobre violaÁ„o de
+				de seu registro s√£o assegurados por lei. Alguns direitos de uso
+				podem ser cedidos por terceiros em contrato ou licen√ßa especial, que
+				pode ser cancelada a qualquer momento se n√£o cumpridos os seus
+				termos. <br /> As marcas registradas do SmartCompras s√≥ podem ser
+				usadas publicamente com autoriza√ß√£o expressa. O uso destas marcas
+				registradas em publicidade e promo√ß√£o de produtos deve ser
+				adequadamente informado.<br /> Reclama√ß√µes sobre viola√ß√£o de
 				direitos autorais O SmartCompras respeita a propriedade intelectual
 				de outras pessoas ou empresas e solicitamos aos nossos membros que
-				faÁam o mesmo. Toda e qualquer violaÁ„o de direitos autorais dever·
+				fa√ßam o mesmo. Toda e qualquer viola√ß√£o de direitos autorais dever√°
 				ser notificada ao SmartCompras e acompanhada dos documentos e
-				informaÁıes que confirmam a autoria. A notificaÁ„o poder· ser
-				enviada pelos e-mails l para o seguinte endereÁo
+				informa√ß√µes que confirmam a autoria. A notifica√ß√£o poder√° ser
+				enviada pelos e-mails l para o seguinte endere√ßo
 				smartcomprasgroup@gmail.com
 			</p>
-			<h3>Leis aplic·veis</h3>
+			<h3>Leis aplic√°veis</h3>
 
-			<p>Este site È controlado pro um grupo de projeto de TCC n„o
-				garante que o conte˙do ou materiais estejam disponÌveis para uso em
-				outras localidades. Seu acesso È proibido em territÛrios onde o
-				conte˙do seja considerado ilegal. Aqueles que optarem por acessar
-				este site a partir de outras localidades o far„o por iniciativa
-				prÛpria e ser„o respons·veis pelo cumprimento das leis locais
-				aplic·veis. Os materiais n„o dever„o ser usados ou exportados em
-				descumprimento das leis brasileiras sobre exportaÁ„o. Qualquer
-				pendÍncia com relaÁ„o aos materiais ser· dirimida pelas leis
-				brasileiras. O acesso ao SmartCompras representa a aceitaÁ„o
+			<p>Este site √© controlado pro um grupo de projeto de TCC n√£o
+				garante que o conte√∫do ou materiais estejam dispon√≠veis para uso em
+				outras localidades. Seu acesso √© proibido em territ√≥rios onde o
+				conte√∫do seja considerado ilegal. Aqueles que optarem por acessar
+				este site a partir de outras localidades o far√£o por iniciativa
+				pr√≥pria e ser√£o respons√°veis pelo cumprimento das leis locais
+				aplic√°veis. Os materiais n√£o dever√£o ser usados ou exportados em
+				descumprimento das leis brasileiras sobre exporta√ß√£o. Qualquer
+				pend√™ncia com rela√ß√£o aos materiais ser√° dirimida pelas leis
+				brasileiras. O acesso ao SmartCompras representa a aceita√ß√£o
 				expressa e irrestrita dos termos de uso acima descritos.</p>
 		</blockquote>
 		<small>SmartGroup <cite title="SmartGroup">SmartGroup</cite></small>

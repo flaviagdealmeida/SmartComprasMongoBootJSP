@@ -1,6 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -12,10 +12,10 @@
 </head>
 <body>
 
-<jsp:include page="menu.jsp"></jsp:include>
+	<jsp:include page="menu.jsp"></jsp:include>
 
-	
-	<div class="container" style="background-color:transparent;">
+
+	<div class="container" style="background-color: transparent;">
 
 		<div id="jssor_1"
 			style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 600px; height: 300px; overflow: hidden; visibility: hidden;">
@@ -74,42 +74,81 @@
 
 	<div class="container">
 
+		<nav class="navbar navbar-inverse" id="menu">
+
+		<div class="container-fluid">
+			<div class="collapse navbar-collapse"
+				id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right clearfix">
+					<li class="active"><a href= "#" rel="nofolow">Sua
+							Lista(${carrinhoCompras.totalItens}) </a></li>
+				</ul>
+			</div>
+		</div>
+		</nav>
+
+
+
+
 		<div class="container-fluid topo">
 			<h2>Lista de Compras</h2>
 		</div>
 
+
+		<div class="container-fluid topo">
+			<label for="nomeLista">Nome da Lista </label> <input type="text"
+				name="nomeLista" id="nomeLista" />
+		</div>
+
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-sm-3" th:each="produto : ${comprasList}">
-					<div class="panel panel-default">
-						<div class="panel-heading">
-							<h3 class="panel-title" th:text="${produto.produto}"></h3>
-						</div>
-						<div class="panel-body">
-							<div class="row">
-								<img class="imgpnl" th:src="${produto.imgProduto}"
-									alt="${produto.produto}" />
+				<c:forEach items="${comprasList}" var="produto">
+					<div class="col-sm-3">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h3 class="panel-title">${produto.produto}</h3>
 							</div>
-							<div class="row car">
-								<div class="col-sm-2"></div>
-								<div class="col-sm-4">
-									<label>Qtde: </label> <input type="number" name="qtde" min="1"
-										max="100" />
+							<div class="panel-body">
+								<div class="row">
+									<img class="imgpnl" src=${produto.imgProduto} alt=${produto.produto } />
 								</div>
-								<div class="col-sm-4">
-									<button class="btn btn-warning btn-sm">
-										<i class="fa fa-cart-plus fa-2x" aria-hidden="true"></i>
-									</button>
+								<div class="row car">
+									<form action="/addprodutoslista" method="post">
+										<div class="col-sm-2"></div>
+										<div class="col-sm-4">
+											<label>Qtde: </label> <input type="number" name="qtde"
+												min="1" max="100" />
+										</div>
+										<div class="col-sm-4">
+											
+											
+											<button class="btn btn-warning btn-sm"
+									type="submit" value=${produto.produto} name="addProdutos" onclick='alert("${produto.produto}")'>
+									<i class="fa fa-cart-plus fa-2x" aria-hidden="true"></i>
+								</button>	
+											
+										</div>
+									</form>
 								</div>
-
 							</div>
 						</div>
 					</div>
-				</div>
+				</c:forEach>
 			</div>
 		</div>
 	</div>
-<jsp:include page="rodape.jsp"></jsp:include>	
+
+
+
+
+
+
+
+
+
+
+
+	<jsp:include page="rodape.jsp"></jsp:include>
 
 </body>
 

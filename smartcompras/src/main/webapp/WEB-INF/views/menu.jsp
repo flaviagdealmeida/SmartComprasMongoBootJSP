@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -27,16 +27,16 @@
 							<li><a tabindex="-1" href="listadecompras">Lista de Compras</a></li>
 							<li><a tabindex="-1" href="listadecompras">Minhas Listas</a></li>
 							<li class="dropdown-submenu"><a class="test" tabindex="-1"
-								href="#">Lista PrÈ-Definidas <span class="caret"></span></a>
+								href="#">Lista Pr√©-Definidas <span class="caret"></span></a>
 								<ul class="dropdown-menu">
 									<li><a tabindex="-1" href="#">Churrasco</a></li>
 									<li><a tabindex="-1" href="#">Mensal</a></li>
 								</ul></li>
 						</ul></li>
-					<li><a href="localizacao">LocalizaÁ„o</a></li>
+					<li><a href="localizacao">Localiza√ß√£o</a></li>
 					<li class="dropdown"><a href="localizacao"
 						class="dropdown-toggle" data-toggle="dropdown" role="button"
-						aria-expanded="false">Gr·ficos <span class="caret"></span>
+						aria-expanded="false">Gr√°ficos <span class="caret"></span>
 					</a>
 						<ul class="dropdown-menu" role="menu">
 							<li><a href="gastos">Acumulado do Ano</a></li>

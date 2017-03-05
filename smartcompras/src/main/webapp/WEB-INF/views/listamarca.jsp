@@ -1,23 +1,15 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html ng-app="imagens">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="viewport" content="width-device-width , initial-scale=1" />
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/r/bs-3.3.5/jq-2.1.4,dt-1.10.8/datatables.min.css" />
-<script src="https://cdn.datatables.net/r/bs-3.3.5/jqc-1.11.3,dt-1.10.8/datatables.min.js"></script>
-<script	src="https://cdn.datatables.net/responsive/2.1.1/js/dataTables.responsive.min.js"></script>
-<link  href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.bootstrap.min.css" />
+
 
 <title>SmartCompras</title>
 
-<script>
-	$(document).ready(function() {
-		$('#myTable').DataTable();
-	});
-</script>
 
 </head>
 <body ng-controller="FotosController" class="ng-scope">
@@ -28,11 +20,11 @@
 			<form action="/delmarca" method="POST">
 				<fieldset>
 					<legend>Listagem de Marcas</legend>
-					<table class="table table-striped table-hover ">
+					<table class="table table-striped table-hover">
 						<thead>
 							<tr>
 								<th>Marca</th>
-								<th>Ação</th>
+								<th>AÃ§Ã£o</th>
 							</tr>
 						</thead>
 						<c:forEach var="marca" items="${marcaLista}">
