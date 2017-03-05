@@ -6,10 +6,13 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="viewport" content="width-device-width , initial-scale=1" />
+
+<!--  
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/r/bs-3.3.5/jq-2.1.4,dt-1.10.8/datatables.min.css" />
 <script src="https://cdn.datatables.net/r/bs-3.3.5/jqc-1.11.3,dt-1.10.8/datatables.min.js"></script>
 <script	src="https://cdn.datatables.net/responsive/2.1.1/js/dataTables.responsive.min.js"></script>
 <link  href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.bootstrap.min.css" />
+-->
 
 <title>SmartCompras</title>
 

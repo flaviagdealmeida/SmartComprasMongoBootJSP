@@ -23,7 +23,7 @@ public class MarcaController {
 	@RequestMapping(value = "/addmarcas", method = RequestMethod.POST)
 	public String addMarcas(@ModelAttribute Marca marca) {
 		marcaRepository.save(marca);
-		return "redirect:marca";
+		return "redirect:listamarca";
 
 	}
 
