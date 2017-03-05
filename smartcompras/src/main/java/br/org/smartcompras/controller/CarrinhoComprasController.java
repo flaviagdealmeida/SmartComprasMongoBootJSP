@@ -23,7 +23,7 @@ public class CarrinhoComprasController {
 	@Autowired
 	ProdutoMongoRepository produtoRepository;
 	
-	@Autowired
+	@Autowired 	
 	ListasComprasRepository comprasRepository;
 		
 	@RequestMapping(value = "/addprodutoslista", params = { "addProdutos" }, method = RequestMethod.POST)
