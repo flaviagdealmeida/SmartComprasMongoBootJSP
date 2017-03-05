@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html xmlns:th="http://www.thymeleaf.org">
+<html>
 <head>
 <title>SmartCompras</title>
 <meta charset="UTF-8" />
@@ -53,6 +53,7 @@
 							<li><a href="listaproduto">Lista de Produtos</a></li>
 							<li><a href="marca">Cadastro Marca</a></li>
 							<li><a href="listamarca">Lista de Marca</a></li>
+							<li><a href="listapredefinida">Cadastro Lista Predefinida</a></li>
 
 						</ul></li>
 				</ul>

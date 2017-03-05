@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html xmlns:th="http://www.thymeleaf.org" ng-app="imagens">
+<html ng-app="imagens">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="viewport" content="width-device-width" />
@@ -11,52 +12,44 @@
 
 	<jsp:include page="menu.jsp"></jsp:include>
 
-
 	<div class="container">
 
-		<div class="container-fluid">
+		<form class="form-horizontal form-produtos" action="/addlistapre"
+			method="POST">
+			<fieldset>
+				<legend>Lista Predefinida</legend>
+				<p>
+					<label class="control-label" for="nomeLista">Nome Lista</label> <input
+						class="form-control" type="text" id="nomeLista" name="nomeLista"
+						size="40" />
+				</p>
 
-			<form action="/delprodutoslista" method="POST">
-				<table class="table table-striped table-hover " id="titulos">
-					<thead>
-						<tr>
-							<th width="200px">Imagem Produto</th>
-							<th class="tit">Produto</th>
-							<th class="tit">Imagem do Produto</th>
-							<th class="tit">Tipo de Produto</th>
-							<th class="tit">Marca</th>
-							<th class="tit">Ação</th>
+				<p>
+					<input class="form-control" type="hidden" id="tipoLista"
+						name="tipoLista" size="40" value="predefinida" />
+				</p>
 
-						</tr>
-					</thead>
-					<tbody>
-						<tr id="dados" th:each="produto : ${produtoList}">
-							<td><img class="imgtable" th:src="${produto.imgProduto}"
-								alt="${produto.produto}" /></td>
-							<td class="tit" th:text="${produto.produto}"></td>
-							<td class="tit" th:text="${produto.imgProduto}"></td>
-							<td class="tit" th:text="${produto.tipoProduto}"></td>
-							<td class="tit" th:text="${produto.marca}"></td>
-							<td class="coluna tit"><button class="btn btn-danger btn-sm"
-									type="submit" th:value="*{produto.id}" name="removerProdutos">
-									<i class="fa fa-trash fa-lg" aria-hidden="true"></i>
-								</button></td>
+				<div class="checkbox">
+					<ul>
+						<c:forEach var="produto" items="${produtoList}">
+						<li ><input type="checkbox" value=${produto.id}
+							id="produtos" name="produtos" />${produto.produto}</li>
+						</c:forEach>
+					</ul>
 
+				</div>
 
+				<div class="col-lg-10 col-lg-offset-4 botoes">
+					<input type="submit" class="btn btn-primary" value="Cadastrar" />
+					<button type="reset" class="btn btn-warning">Cancelar</button>
+				</div>
+			</fieldset>
+		</form>
 
-
-
-						</tr>
-					</tbody>
-				</table>
-
-			</form>
-
-		</div>
 
 	</div>
 
-<jsp:include page="rodape.jsp"></jsp:include>
+	<jsp:include page="rodape.jsp"></jsp:include>
 
 </body>
 <!-- CSS -->

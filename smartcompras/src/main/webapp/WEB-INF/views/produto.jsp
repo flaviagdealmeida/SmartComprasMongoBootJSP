@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html xmlns:th="http://www.thymeleaf.org" ng-app="imagens">
+<html ng-app="imagens">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="viewport" content="width-device-width" />
@@ -12,7 +13,7 @@
 	<jsp:include page="menu.jsp"></jsp:include>
 
 
-	<div class="container" th:fragment="produto">
+	<div class="container">
 
 
 		<div class="fotoProduto">
@@ -41,12 +42,14 @@
 				</div>
 
 				<div class="form-group">
-					<label for="marca" class="control-label">Marca</label> <select
-						class="form-control">
-						<option th:each="marca : ${listMarca}" th:text="${marca.marca}"
-							th:value="${marca.marca}"></option>
+					<label for="marca" class="control-label">Marca</label> 
+				
+					<select class="form-control">
+					<c:forEach var="marca" items="${listMarca}">		
+						<option value=${marca.marca}>${marca.marca}</option>
+					</c:forEach>
 					</select>
-
+				
 
 				</div>
 				<div class="form-group">

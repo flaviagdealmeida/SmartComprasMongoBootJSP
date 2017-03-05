@@ -1,6 +1,6 @@
 package br.org.smartcompras.models;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.data.annotation.Id;
 
@@ -9,9 +9,9 @@ public abstract class Lista {
 	@Id
 	private String id;
 	private String nomeLista;
-	private String tipoLista;
-	private String valor;
-	private ArrayList<Produto> produtos;
+	private List<TipoLista> tipoLista;
+	private List<Valor>valor;
+	private List<Produto> produtos;
 		
 	public String getId() {
 		return id;
@@ -29,27 +29,27 @@ public abstract class Lista {
 		this.nomeLista = nomeLista;
 	}
 
-	public String getTipoLista() {
+	public List<TipoLista> getTipoLista() {
 		return tipoLista;
 	}
 
-	public void setTipoLista(String tipoLista) {
+	public void setTipoLista(List<TipoLista> tipoLista) {
 		this.tipoLista = tipoLista;
 	}
 
-	public String getValor() {
+	public List<Valor> getValor() {
 		return valor;
 	}
 
-	public void setValor(String valor) {
+	public void setValor(List<Valor> valor) {
 		this.valor = valor;
 	}
 
-	public ArrayList<Produto> getProdutos() {
+	public List<Produto> getProdutos() {
 		return produtos;
 	}
 
-	public void setProdutos(ArrayList<Produto> produtos) {
+	public void setProdutos(List<Produto> produtos) {
 		this.produtos = produtos;
 	}
 
