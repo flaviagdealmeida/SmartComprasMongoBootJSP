@@ -3,6 +3,8 @@ package br.org.smartcompras.controller;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -27,6 +29,7 @@ public class ListaPreController {
 	 
 	
 	@RequestMapping(value = "/addlistapre", method = RequestMethod.POST)
+	@CacheEvict(value="preLista", allEntries=true)
 	public String addProdutos(@ModelAttribute Predefinida predefinida) {
 		preRepository.save(predefinida);
 		return "redirect:listapredefinida";
@@ -40,7 +43,7 @@ public class ListaPreController {
 	}
 
 	@RequestMapping("/listapredefinida")
-	
+	@Cacheable(value="preLista")
 	public String preList(Model model) {
 		model.addAttribute("produtoList", produtoRepository.findAll());
 		model.addAttribute("preList", preRepository.findAll());

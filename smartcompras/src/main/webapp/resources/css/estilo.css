@@ -1,0 +1,159 @@
+
+.container-fluid{
+	font-family: 'Imprima', sans-serif;
+	
+}
+
+.col-sm-4 {
+	font-family: 'Imprima', sans-serif;
+	height: 200px;
+	color:white;
+}
+
+#tserv{
+	height: 200px;
+	
+}
+.col-sm-4 h2 {
+	text-align: center;
+	font-size: 3em;
+
+	}
+.col-sm-4 p {
+	margin-top:5%;
+	text-align: center;
+	font-size: 1em;
+
+	}
+	
+.col-sm-4 img {
+	margin-top:5%;
+	padding-left: 25%;
+	}
+	
+	
+#linha{
+	
+	border-left-style: solid;
+	
+}
+/*--------------------------------------------------------- Fim Formatação Modal -------------------------------------------------------------------*/
+
+#busca{
+	border-radius:8px;
+	margin-left: 5px;
+}
+
+.logo-small{
+	color: #f4511e;
+    font-size: 90px;
+}
+
+.servicos span{
+	color: #f4511e;
+    font-size: 90px;
+}
+.servicos{
+	background-color: white;
+	color: black;
+}
+.servicos h4{
+	background-color: white;
+	color: #303030;
+}
+.servicos p{
+	background-color: white;
+	color: #303030;
+}
+.servicos h2{
+	background-color: black;
+	color: white;
+	margin-left: 0px;
+}
+
+
+
+.section_sld{
+	margin-top: 2.5%;
+}
+
+.jumbotron {
+	 background-color: black;
+}
+
+.jumbotron h2{
+	margin-left: 0.5em;
+}
+
+
+.jumbotron p{
+	margin-left:5%;
+	margin-right: 45%;
+	margin-top:1%;	
+	display: block;
+	color:white;
+	text-align: justify;
+}
+
+.btn-group{
+	float:right;
+	font-family: 'Imprima', sans-serif;
+}
+/* -------------------------------- Sobre ---------------------------------- */
+
+blockquote{
+	
+	font-size: 21px;
+	color:white;
+	border-color: orange;
+	text-align: justify;
+	
+}
+
+/* ---------------------------- vertical --------------------------------- */
+
+#graf {
+      position: relative;
+  }
+  
+  ul.nav-pills {
+      top: 150px;
+      float:left;
+      left:0.5%;
+      padding: 40px;
+      position: fixed;
+      margin-top: 1%;
+  }
+  
+   .col-sm-3{
+  	top: 150px;
+  
+  }
+  
+  .bt{
+  	width: 150px;
+  }
+  
+  div.col-sm-9 div {
+  	 
+      height: 600px;
+      font-size: 20px;
+  }
+
+#section1{
+	margin-top	: 150px;
+	background-color: white;
+	width: 1200px;
+	margin-left: -150px;
+}
+
+#chart{
+	margin-left: 23%;
+	margin-top: 5%;
+	margin-bottom: 2%;
+	padding: 3em;
+}
+.meio{
+	height: 40em;
+	
+}

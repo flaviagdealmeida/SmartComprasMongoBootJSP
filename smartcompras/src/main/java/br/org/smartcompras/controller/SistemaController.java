@@ -11,12 +11,12 @@ public class SistemaController {
 	
 	
 	
-	@RequestMapping("/home")
+	@RequestMapping("/")
 	public String home() {
 		return "home";
 	}
 
-	
+		
 	@RequestMapping("equipe")
 	public String equipe() {
 		return "equipe";

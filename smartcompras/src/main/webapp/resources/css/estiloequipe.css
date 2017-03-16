@@ -1,0 +1,56 @@
+ /* ------------------------------------- Equipe -------------------------------------- */
+
+.col-sm-2{
+	
+	margin-left: 1.3em;
+	width:16em;
+	height: 40em;
+
+}
+
+.rows{
+	max-width: 95%;
+	margin-left:2.5%;
+	float: left;
+}
+
+
+.col-lg-2{
+	
+	display:block;
+	height: auto;
+	margin-left: 2%;
+	margin-right: 1%;
+	
+	
+}
+
+.topo{
+	margin-top: 2%;
+	background-color: #1C1C1C;
+	color: white;
+}
+
+.img-circle{
+	margin-top: 15%;
+	margin-left: 1%;
+}
+
+.panel{
+	height: 320px;
+	
+}
+
+	
+#home{
+	margin-top:1%;
+	float:right;
+}
+
+#homeeq{
+	margin-top:2%;
+	float:right;
+}
+.panel-footer a{
+	margin-left: 35%;
+}

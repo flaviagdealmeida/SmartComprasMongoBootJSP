@@ -80,7 +80,7 @@
 			<div class="collapse navbar-collapse"
 				id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav navbar-right clearfix">
-					<li class="active"><a href= "#" rel="nofolow">Sua
+					<li class="active"><a href="#" rel="nofolow">Sua
 							Lista(${carrinhoCompras.totalItens}) </a></li>
 				</ul>
 			</div>
@@ -94,48 +94,78 @@
 			<h2>Lista de Compras</h2>
 		</div>
 
-
-		<div class="container-fluid topo">
-			<label for="nomeLista">Nome da Lista </label> <input type="text"
-				name="nomeLista" id="nomeLista" />
+<form action="" method="post">
+		<div class="container-fluid">
+		
+			<div class="row">
+				<label for="nomeLista">Nome da Lista </label> <input type="text"
+					name="nomeLista" id="nomeLista" />
+			</div>
 		</div>
 
 		<div class="container-fluid">
+		
 			<div class="row">
 				<c:forEach items="${comprasList}" var="produto">
 					<div class="col-sm-3">
 						<div class="panel panel-default">
 							<div class="panel-heading">
-								<h3 class="panel-title">${produto.produto}</h3>
+								<h3 class="panel-title" >${produto.produto}</h3>
+								<input type="hidden" value=${produto.produto} name="produto" id="produto"/>
+								<input type="hidden" value=${produto.id} name="produtos" id="produtos"/>
 							</div>
 							<div class="panel-body">
 								<div class="row">
-									<img class="imgpnl" src=${produto.imgProduto} alt=${produto.produto } />
+									<img class="imgpnl" src=${produto.imgProduto
+										} alt=${produto.produto } name="imgProduto"/>
 								</div>
 								<div class="row car">
-									<form action="/addprodutoslista" method="post">
+									
 										<div class="col-sm-2"></div>
 										<div class="col-sm-4">
-											<label>Qtde: </label> <input type="number" name="qtde"
+											<label>Qtde: </label> <input type="number" name="quantidade" id="quantidade"
 												min="1" max="100" />
 										</div>
 										<div class="col-sm-4">
-											
-											
-											<button class="btn btn-warning btn-sm"
-									type="submit" value=${produto.produto} name="addProdutos" onclick='alert("${produto.produto}")'>
+ 
+
+											<!--button class="btn btn-warning btn-sm" type="submit" onclick="inserirLinhaTabela()">
 									<i class="fa fa-cart-plus fa-2x" aria-hidden="true"></i>
-								</button>	
-											
+								</button-->
+								<button onclick="inserirLinhaTabela()" type="button"><i class="fa fa-cart-plus fa-2x" aria-hidden="true"></i></button> 
+
 										</div>
-									</form>
+									
 								</div>
+								
 							</div>
 						</div>
 					</div>
 				</c:forEach>
 			</div>
+			
 		</div>
+	</form>
+	
+	<nav>
+	
+		 <table id="minhaTabela" border="1">
+            <tr>
+                <td>
+                   Produto
+                </td>
+                <td>
+                    Quantidade
+                </td>
+            </tr>
+             </table>	
+     
+        <input type="button" value="Inserir Linha" onclick="inserirLinhaTabela()"  />
+            
+	
+	</nav>
+	
+	
 	</div>
 
 
@@ -180,6 +210,40 @@
 <script src="js/controllers/fotos-controller.js"></script>
 <script src="js/droplist.js"></script>
 <!-- Angular -->
+
+
+
+<script>
+        // Função responsável por inserir linhas na tabela
+        function inserirLinhaTabela() {
+        	 var produto =document.getElementById("produtos").value;
+        	 var quantidade = document.getElementById("quantidade").value;
+            // Captura a referência da tabela com id “minhaTabela”
+          /*   var table = document.getElementById("minhaTabela");
+            // Captura a quantidade de linhas já existentes na tabela
+            var numOfRows = table.rows.length;
+            // Captura a quantidade de colunas da última linha da tabela
+            var numOfCols = table.rows[numOfRows-1].cells.length;
+
+            // Insere uma linha no fim da tabela.
+            var newRow = table.insertRow(numOfRows);
+ 
+           
+            
+            // Faz um loop para criar as colunas
+            for (var j = 0; j < numOfCols; j++) {
+                // Insere uma coluna na nova linha 
+                newCell = newRow.insertCell(j);
+                // Insere um conteúdo na coluna
+               	// newCell.innerHTML = "Linha "+ numOfRows + " – Coluna "+ j;
+                newCell.innerHTML = "Produto "+ produto + " – Quantidade "+ quantidade;
+            }
+            
+ */
+ 	alert(produto+" - "+quantidade);
+ 
+        } 
+</script>
 
 <!-- Slider -->
 

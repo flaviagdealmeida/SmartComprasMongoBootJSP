@@ -10,8 +10,15 @@ angular.module('produtos-diretivas',[])
 	
 	ddo.transclude = true;
 	
-	ddo.templateUrl ="js/diretivas/meu-painel.html";
+	ddo.templateUrl ='js/diretivas/';
 		
+		
+	
+	
+	
+	
+	
+	
 	return ddo;
 	
 });

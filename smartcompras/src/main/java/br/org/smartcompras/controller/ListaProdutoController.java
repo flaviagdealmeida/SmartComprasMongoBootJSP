@@ -1,6 +1,7 @@
 package br.org.smartcompras.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,6 +24,8 @@ public class ListaProdutoController {
 	}
 
 	@RequestMapping("/listaproduto")
+	@Cacheable(value="produtosList")
+
 	public String produtoList(Model model) {
 		model.addAttribute("produtoList", produtoRepository.findAll());
 		return "listaproduto";
@@ -30,15 +33,10 @@ public class ListaProdutoController {
 		
 		
 	
-	@RequestMapping("/listadecompras")
-	public String comprasList(Model model) {
-		model.addAttribute("comprasList", produtoRepository.findAll());
-		return "listadecompras";
-	}
 	
 	
 	
-	@RequestMapping("/listaimgproduto")
+	@RequestMapping("/api/listaimgproduto")
 	@ResponseBody
 	public Iterable<Produto> imgsProduto(){
 		return this.produtoRepository.findAll();

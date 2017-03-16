@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
-<html xmlns:th="http://www.thymeleaf.org">
+<html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>SmartCompras</title>
@@ -20,7 +20,7 @@
 				<div class="form-group"  id="cad">
 					
 					<div class="col-lg-10">
-						<input type="text" class="form-control" id="inputNome"
+						<input type="text" class="form-control" id="inputNome"  name="Nome"
 							placeholder="Nome" />
 					</div>
 				</div>
@@ -28,42 +28,42 @@
 					
 					<div class="col-lg-10">
 						<input type="text" class="form-control" id="imputSobrenome"
-							placeholder="Sobrenome" />
+							placeholder="Sobrenome" name="sobrenome" />
 					</div>
 				</div>
 				<div class="form-group"  id="cad">
 					
 					<div class="col-lg-10">
 						<input type="date" class="form-control" id="inpuNasc"
-							placeholder="Data de Nascimento" />
+							placeholder="Data de Nascimento" name="dataNasc" />
 					</div>
 				</div>
 				<div class="form-group"  id="cad">
 					
 					<div class="col-lg-10">
 						<input type="email" class="form-control" id="inpuEmail"
-							placeholder="Email" />
+							placeholder="Email" name="email"/>
 					</div>
 				</div>
 				<div class="form-group"  id="cad">
 					
 					<div class="col-lg-10">
 						<input type="text" class="form-control" id="inputCep"
-							placeholder="CEP" />
+							placeholder="CEP" name="cep"/>
 					</div>
 				</div>
 				<div class="form-group"  id="cad">
 					
 					<div class="col-lg-10">
 						<input type="tel" class="form-control" id="inputFone"
-							placeholder="Telefone" />
+							placeholder="Telefone" name="telefone"/>
 					</div>
 				</div>
 				<div class="form-group" id="cad">
 					
 					<div class="col-lg-10">
 						<input type="password" class="form-control" id="inputSenha"
-							placeholder="Senha" />
+							placeholder="Senha" name="senha"/>
 						
 					</div>
 				</div>

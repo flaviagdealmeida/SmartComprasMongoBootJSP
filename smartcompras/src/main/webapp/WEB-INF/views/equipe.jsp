@@ -17,13 +17,8 @@
 		<h2>Engenharia de Software Senac Rio 2016</h2>
 		<br />
 	</div>
-		<div class="rows">
-			<div class="col-lg-2">
-				<img class="img-circle" src="img/equipe/Eu.jpg" alt="Flavia Almeida"
-					width="160" height="160" />
-				<h2>Engenharia de Software Senac Rio 2016</h2>
-		<br />
-	</div>
+		
+	
 		<div class="rows">
 			<div class="col-lg-2">
 				<img class="img-circle" src="img/equipe/Eu.jpg" alt="Flavia Almeida"
@@ -116,7 +111,7 @@
 
 
 
-	<div th:include="rodape :: rodape"></div>
+	<jsp:include page="rodape.jsp"></jsp:include>
 </body>
 <link rel="stylesheet" href="css/stylehome.css" />
 <link rel="stylesheet" href="css/estiloequipe.css" />

@@ -1,7 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html xmlns:th="http://www.thymeleaf.org">
+<html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>SmartCompras</title>
@@ -11,51 +13,63 @@
 
 	<nav class="navbar navbar-inverse" id="menu">
 
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<a class="navbar-brand" href="#">SmartCompras</a>
-			</div>
-
-			<div class="collapse navbar-collapse"
-				id="bs-example-navbar-collapse-1">
-				<ul class="nav navbar-nav">
-					<li class="active"><a href="home">Home</a></li>
-				</ul>
-			</div>
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="home">SmartCompras</a>
 		</div>
+
+		<div class="collapse navbar-collapse"
+			id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="home">Home</a></li>
+			</ul>
+		</div>
+	</div>
 
 	</nav>
 
 	<div class="container">
 
-		<form class="form-horizontal cadastro" action="addusuario" method="post">
+		<form class="form-horizontal cadastro" action="/login" method="post">
 			<fieldset>
 				<legend>Login</legend>
-				<div class="form-group"  id="cad">
+				<div class="form-group" id="cad">
 					<div class="col-lg-8">
 						<input type="email" class="form-control" id="inpuEmail"
-							placeholder="Email" />
+							placeholder="Email" name="username" />
 					</div>
 				</div>
 				<div class="form-group" id="cad">
 					<div class="col-lg-8">
 						<input type="password" class="form-control" id="inputSenha"
-							placeholder="Senha" />
+							placeholder="Senha" name="password" />
 						
+						<c:if test="${param.login}">
+							
+						</c:if>
+
+						<c:if test="${param.error ne null}">
+							<div class="alert-danger">Invalid username and password.</div>
+						</c:if>
+						<c:if test="${param.logout ne null}">
+							<div class="alert-normal">You have been logged out.</div>
+						</c:if>
 					</div>
+					<input type="hidden" name="${_csrf.parameterName}" 	value="${_csrf.token}" />
+					
 				</div>
 				<div class="form-group" id="cad">
 					<div class="col-lg-8">
 						<a href="#">Esqueceu a senha? </a>
 					</div>
 				</div>
-				
+
 				<div class="form-group" id="cad">
 					<div class="col-lg-8">
 						<button type="submit" class="btn btn-warning btn-lg btn-block">Acessar</button>
 					</div>
 				</div>
-				
+
 				<div class="form-group" id="cad">
 					<div class="col-lg-10">
 						Não tem nenhuma conta? <a href="cadastro">Crie uma grátis</a>
@@ -63,13 +77,12 @@
 				</div>
 				<div class="form-group " id="cad">
 					<div class="col-lg-10 texto">
-						Conecte com: <i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
+						Conecte com: <i class="fa fa-facebook-square fa-2x"
+							aria-hidden="true"></i>
 					</div>
 				</div>
-				
-				
-			</fieldset>
-		</form>
+	</fieldset>
+	</form>
 
 
 	</div>

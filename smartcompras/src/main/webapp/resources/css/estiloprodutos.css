@@ -1,0 +1,88 @@
+.container-fluid{
+	font-family: 'Imprima', sans-serif;
+	width: 90%;
+}
+
+.container{
+	
+	background-color: white;
+	height: auto;
+}
+
+#busca{
+	border-radius:8px;
+	margin-left: 5px;
+}
+
+.form-produtos{
+	
+	width: 40%;
+	margin-left:12%; 
+	margin-top: 3%;
+}
+#form-listagem{
+	
+	margin-top: 3%;
+}
+
+.marca{
+	
+	height: 18em;
+}
+
+.table{
+	max-width: 80%;
+	margin-top:5%; 
+	padding: 1%;
+	font-size: 1.5em;
+	
+}
+.botoes{
+	margin: 5%;
+}
+
+#form_listagem{
+	margin-top: 3%;
+	
+	
+}
+#formmarcas{
+	width: 60%;
+	margin-left: 20%;
+	
+}
+
+.coluna{
+	width: 15%;
+}
+
+
+
+.fotoProduto img{
+	max-width: 25%;	
+	height: 17em;
+	float: right;
+	margin-right: 12%;
+	margin-top: 9%;
+	
+}
+
+.tit td{
+	margin-top	: 30px;	
+}
+
+.imgtable{
+	max-width: 50%;
+	
+	margin-left: 20%;
+}
+
+.imgpnl{
+	max-width: 113px;
+	height: 113px;	
+	margin-left: 25%;
+}
+.car button{
+	margin-top: 27%;
+	
+}

@@ -3,6 +3,8 @@ package br.org.smartcompras.controller;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.WebDataBinder;
@@ -32,7 +34,8 @@ public class ProdutoController {
 		binder.addValidators(new ProdutoValidation());
 	}
 	
-	@RequestMapping(value = "/addprodutos", method = RequestMethod.POST)
+	@RequestMapping(value = "addprodutos", method = RequestMethod.POST)
+	@CacheEvict(value="produtoLista", allEntries=true)
 	public String addProdutos(@ModelAttribute Produto produto) {
 		
 		produtoRepository.save(produto);
@@ -47,7 +50,7 @@ public class ProdutoController {
 	}
 
 	@RequestMapping("/produto")
-	
+	@Cacheable(value="produtoLista")
 	public String produtoList(Model model) {
 		model.addAttribute("produtoList", produtoRepository.findAll());
 		model.addAttribute("listMarca", marcaRepository.findAll());

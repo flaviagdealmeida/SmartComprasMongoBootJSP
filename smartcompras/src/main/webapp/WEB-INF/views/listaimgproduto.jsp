@@ -22,6 +22,7 @@
 				</thead>
 				<tbody>
 					<tr th:each="produto : ${imgsList}">
+						<td th:text="${produto.id}"></td>
 						<td th:text="${produto.produto}"></td>
 						<td th:text="${produto.imgProduto}"></td>
 					</tr>

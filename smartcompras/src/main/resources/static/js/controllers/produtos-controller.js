@@ -1,8 +1,8 @@
-/*angular.module('produtos').controller(function($scope, $http){
+angular.module('produtos').controller('ProdutosController',function($scope, $http){
 	
 	$scope.imgs =[];
 	
-	$http.get('localhost:8080/listaimgprodutos')
+	$http.get('api/listaimgproduto')
 	.success(function(img){
 		$scope.imgs = img;
 	})
@@ -12,7 +12,7 @@
 });
 
 app.controller('ProdutosController', function($scope, $http) {
-   $http.get("listaimgproduto.html")
+   $http.get('api/listaimgproduto')
    .then(function (response) {
 	   $scope.produtos = response.data.records;});
 }); 
@@ -20,7 +20,7 @@ app.controller('ProdutosController', function($scope, $http) {
 angular.module('produtos').factory('ProdutosController', function($http) {
     return {
         getProduct: function(id) {
-            return $http.get('listaimgproduto.html').then(function(response) {
+            return $http.get('api/listaimgproduto').then(function(response) {
                 return response.data;
             });
         }

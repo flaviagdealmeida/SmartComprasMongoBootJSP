@@ -3,6 +3,8 @@ package br.org.smartcompras.controller;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -21,6 +23,7 @@ public class MarcaController {
 	
 
 	@RequestMapping(value = "/addmarcas", method = RequestMethod.POST)
+	@CacheEvict(value="marcasLista", allEntries=true)
 	public String addMarcas(@ModelAttribute Marca marca) {
 		marcaRepository.save(marca);
 		return "redirect:marca";
@@ -35,6 +38,7 @@ public class MarcaController {
 	
 	
 	@RequestMapping("/listamarca")
+	@Cacheable(value="marcasLista")
 	public String marcaLista(Model model) {
 		model.addAttribute("marcaLista", marcaRepository.findAll());
 		return "listamarca";
