@@ -40,6 +40,7 @@
 							<td class="tit"> ${produto.marca}</td>
 							<td class="coluna tit"><button class="btn btn-danger btn-sm"
 									type="submit" value=${produto.id} name="removerProdutos">
+									<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
 									<i class="fa fa-trash fa-lg" aria-hidden="true"></i>
 								</button></td>
 

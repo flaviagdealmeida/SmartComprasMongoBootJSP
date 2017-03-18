@@ -70,6 +70,7 @@
 				<div class="form-group" id="cad">
 					<div class="col-lg-10 col-lg-offset-2">
 						<button type="submit" class="btn btn-warning">Cadastrar</button>
+						<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
 						<button type="reset" class="btn btn-primary">Cancelar</button>
 					</div>
 				</div>

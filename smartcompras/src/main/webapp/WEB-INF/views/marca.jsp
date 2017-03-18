@@ -22,6 +22,7 @@
 				</p>
 				<div class="col-lg-10 col-lg-offset-4">
 					<button type="submit" class="btn btn-primary">Cadastrar</button>
+					<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
 					<button type="reset" class="btn btn-warning">Cancel</button>
 				</div>
 			</fieldset>

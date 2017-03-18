@@ -33,6 +33,7 @@
 									<td>${marca.marca}</td>
 									<td class="coluna"><button class="btn btn-danger btn-sm"
 											type="submit" value=${marca.id } name="removerMarca">
+											<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
 								<i class="fa fa-trash fa-lg" aria-hidden="true"></i></button></td>
 
 								</tr>

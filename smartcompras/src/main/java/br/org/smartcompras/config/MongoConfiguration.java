@@ -10,16 +10,22 @@ import com.mongodb.MongoClient;
 @Configuration
 
 public class MongoConfiguration {
-  
-	 @Bean
-	    public Mongo mongo() throws Exception {
-	        return new MongoClient("localhost");
-	    }
-	 
-	    @Bean
-	    public MongoTemplate mongoTemplate() throws Exception {
-	        return new MongoTemplate(mongo(), "smartcompras");
-	    }
-  
-  
+
+	@Bean
+	public MongoClient createConnection() {
+
+		// You should put your mongo ip here
+		return new MongoClient("localhost");
+	}
+
+	@Bean
+	public Mongo mongo() throws Exception {
+		return new MongoClient("localhost");
+	}
+
+	@Bean
+	public MongoTemplate mongoTemplate() throws Exception {
+		return new MongoTemplate(mongo(), "smartcompras");
+	}
+
 }
