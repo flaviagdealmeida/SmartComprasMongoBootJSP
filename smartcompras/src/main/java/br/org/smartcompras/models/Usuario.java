@@ -27,6 +27,7 @@ public class Usuario implements UserDetails {
 	private String dataNasc;
 	private String telefone;
 	private String senha;
+	private String role;
 
 	@DateTimeFormat(pattern = "dd/MM/yyyy")
 	private Date cadastro;
@@ -168,6 +169,14 @@ public class Usuario implements UserDetails {
 	public boolean isEnabled() {
 		// TODO Auto-generated method stub
 		return true;
+	}
+
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
 	}
 
 }

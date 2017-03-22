@@ -30,14 +30,17 @@
 
 	<div class="container">
 
-		<form class="form-horizontal cadastro" action="/login" method="post">
+		<form class="form-horizontal cadastro" action="/login" method="POST">
 			<fieldset>
+			
+			<input type="hidden" class="form-control" id="inputrole" name="authorities"/>
 				<legend>Login</legend>
 				<div class="form-group" id="cad">
 					<div class="col-lg-8">
 						<input type="email" class="form-control" id="inpuEmail"
 							placeholder="Email" name="username" />
 					</div>
+	
 				</div>
 				<div class="form-group" id="cad">
 					<div class="col-lg-8">
@@ -67,6 +70,7 @@
 				<div class="form-group" id="cad">
 					<div class="col-lg-8">
 						<button type="submit" class="btn btn-warning btn-lg btn-block">Acessar</button>
+						<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
 					</div>
 				</div>
 

@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="s"%>
+<%@ taglib uri="http://www.springframework.org/security/tags" prefix="security"%>
 <!DOCTYPE>
 <html>
 <head>
@@ -46,6 +48,7 @@
 							<li><a href="#">Menor Gasto</a></li>
 						</ul></li>
 
+                    <security:authorize access="hasRole('ROLE_ADMIN')">
 					<li class="dropdown"><a href="#" class="dropdown-toggle"
 						data-toggle="dropdown" role="button" aria-haspopup="true"
 						aria-expanded="false">Painel Administrativo <span
@@ -58,7 +61,7 @@
 							<li><a href="listapredefinida">Cadastro Lista
 									Predefinida</a></li>
 
-						</ul></li>
+						</ul></li></security:authorize>
 				</ul>
 
 				<ul class="nav navbar-nav navbar-right">

@@ -48,6 +48,13 @@
 				<div class="form-group"  id="cad">
 					
 					<div class="col-lg-10">
+						<input type="text" class="form-control" id="inpuRole"
+							placeholder="Permissão" name="role"/>
+					</div>
+				</div>
+				<div class="form-group"  id="cad">
+					
+					<div class="col-lg-10">
 						<input type="text" class="form-control" id="inputCep"
 							placeholder="CEP" name="cep"/>
 					</div>
