@@ -41,7 +41,7 @@
 						data-toggle="dropdown" role="button" aria-haspopup="true"
 						aria-expanded="false">Lista <span class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li><a tabindex="-1" href="listadecompras">Lista de Compras</a></li>
+							<li><a tabindex="-1" href="listadecompras2">Lista de Compras</a></li>
 							<li><a tabindex="-1" href="#">Minhas Listas</a></li>
 							<li class="dropdown-submenu">
 							<a class="test" tabindex="-1" href="#">Predefinidas <span class="caret"></span></a>
