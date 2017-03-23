@@ -178,5 +178,4 @@ public class Usuario implements UserDetails {
 	public void setRole(String role) {
 		this.role = role;
 	}
-
 }

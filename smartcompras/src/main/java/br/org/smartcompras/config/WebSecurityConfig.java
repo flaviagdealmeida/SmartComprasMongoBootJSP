@@ -35,7 +35,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		.antMatchers("/supermercado").hasRole("ADMIN")
 		.antMatchers("/listasupermercado").hasRole("ADMIN")
 		.antMatchers("/listapredefinida").hasRole("ADMIN")
-		.antMatchers("/listaspre").hasRole("ADMIN");
+		.antMatchers("/listaspre").hasRole("ADMIN")
+		.antMatchers("/listapredefinida").hasRole("ADMIN");
+
 
 		
 		http
