@@ -50,14 +50,35 @@ public class ListaPreController {
 		return "listapredefinida";
 	}
 
+	@RequestMapping("/listaspre")
+	public String preLists(Model model) {
+		model.addAttribute("preLists", preRepository.findAll());
+		return "listaspre";
+	}
+
+	
+	@RequestMapping("/listaprechurrasco")
+	public String preListaChurrasco(Model model) {
+		model.addAttribute("preListaChurrasco", preRepository.findAll());
+		return "listaprechurrasco";
+	}
+	
+	
+	
+	@RequestMapping("/menu")
+	public String preListas(Model model) {
+		model.addAttribute("preListas", preRepository.findAll());
+		return "menu";
+	}
+	
 	@RequestMapping(value = "/delpredefinida", params = { "removerPredefinida" }, method = RequestMethod.POST)
 
 	public String delProduto(@ModelAttribute Predefinida predefinida, final HttpServletRequest req) {
 		String predefinidaId = String.valueOf((req.getParameter("removerPredefinida")));
 
-		produtoRepository.delete(predefinidaId);
+		preRepository.delete(predefinidaId);
 
-		return "redirect:listapredefinida";
+		return "redirect:listaspre";
 	}
 	
 	/*

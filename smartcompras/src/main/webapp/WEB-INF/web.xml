@@ -4,4 +4,29 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>CarrinhoDeCompras</servlet-name>
+  	<display-name>CarrinhoDeCompras</display-name>
+  	<description></description>
+  	<servlet-class>br.org.smartcompras.controller.CarrinhoDeCompras</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>CarrinhoDeCompras</servlet-name>
+  	<url-pattern>/CarrinhoDeCompras</url-pattern>
+  </servlet-mapping>
+  
+  <error-page>
+	<error-code>404</error-code>
+	<location>/WEB-INF/views/404.jsp</location>
+  </error-page>
+  
+  <error-page>
+  <exception-type>java.lang.Exception</exception-type>
+  <location>/WEB-INF/views/errors/500.jsp</location>
+</error-page>
+   
 </web-app>
+
+
+
+

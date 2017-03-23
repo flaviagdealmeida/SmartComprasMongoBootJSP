@@ -2,30 +2,49 @@ package br.org.smartcompras.models;
 
 public class ItensLista {
 
+	private Produto Produto;
+	private Integer quantidade;
 	
-	private int idProduto;
-	private int quantidade;
-	private int idLista;
+		
 	
-	
-	public int getIdProduto() {
-		return idProduto;
+	public ItensLista() {
+		super();
 	}
-	public void setIdProduto(int idProduto) {
-		this.idProduto = idProduto;
+	
+	
+	public ItensLista(br.org.smartcompras.models.Produto produto) {
+		super();
+		Produto = produto;
+		//this.quantidade = quantidade;
 	}
-	public int getQuantidade() {
+
+
+
+	public Produto getProduto() {
+		return Produto;
+	}
+	public void setProduto(Produto produto) {
+		Produto = produto;
+	}
+
+
+	public Integer getQuantidade() {
 		return quantidade;
 	}
-	public void setQuantidade(int quantidade) {
+
+
+	public void setQuantidade(Integer quantidade) {
 		this.quantidade = quantidade;
 	}
-	public int getIdLista() {
-		return idLista;
+
+
+	@Override
+	public String toString() {
+		return "ItensLista [Produto=" + Produto + "]";
 	}
-	public void setIdLista(int idLista) {
-		this.idLista = idLista;
-	}
+		
+	
+	
 	
 	
 	

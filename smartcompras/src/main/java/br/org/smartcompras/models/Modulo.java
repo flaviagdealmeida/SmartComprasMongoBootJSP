@@ -5,6 +5,4 @@ public enum Modulo {
 	ADMIN, USUARIO;
 	
 	
-	
-	
 }

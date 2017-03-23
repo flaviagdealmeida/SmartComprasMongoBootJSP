@@ -2,10 +2,12 @@
 	pageEncoding="UTF-8"%>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	
 <title>SmartCompras</title>
 
 </head>
@@ -75,19 +77,14 @@
 						Não tem nenhuma conta? <a href="cadastro">Crie uma grátis</a>
 					</div>
 				</div>
-				<div class="form-group " id="cad">
-					<div class="col-lg-10 texto">
-						Conecte com: <i class="fa fa-facebook-square fa-2x"
-							aria-hidden="true"></i>
-					</div>
-				</div>
+				
 	</fieldset>
 	</form>
 
 
 	</div>
 
-	<div th:include="rodape :: rodape"></div>
+	<jsp:include page="rodape.jsp"></jsp:include>
 </body>
 <link rel="stylesheet" href="css/stylehome.css" />
 <link rel="stylesheet"

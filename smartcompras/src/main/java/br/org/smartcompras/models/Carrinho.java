@@ -1,5 +1,7 @@
 package br.org.smartcompras.models;
 
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import org.springframework.data.annotation.Id;
@@ -13,21 +15,39 @@ public class Carrinho{
 	
 	private String valor;
 	
-	private List<Produto> produtos;
+	private List<ItensLista> itens;
+
+	private Integer quantidade;
 		
-	private Integer quantidade; 
-	
-	
-	
-	
 	
 	public Carrinho() {
 		super();
 	}
+	
+	
+	public void addNovoItem(ItensLista item){
+		
+		if(this.itens == null)
+			this.itens = new ArrayList<ItensLista>();
+		
+		this.itens.add(item);
+	}
 
 	
+	public void removeItem(ItensLista itemRemove){
+		
+		for (Iterator i = itens.iterator();i.hasNext();) {
+			ItensLista item = (ItensLista) i.next();
+			
+			if(item.getProduto().getId() == itemRemove.getProduto().getId())
+				i.remove();
+			
+		}
+	}
+	
+	
 	public Integer getQuantidade() {
-		return quantidade;
+		return getQuantidade();
 	}
 
 
@@ -60,13 +80,19 @@ public class Carrinho{
 		this.valor = valor;
 	}
 
-	public List<Produto> getProdutos() {
-		return produtos;
+
+	public List<ItensLista> getItens() {
+		return itens;
 	}
 
-	public void setProdutos(List<Produto> produtos) {
-		this.produtos = produtos;
+
+	public void setItens(List<ItensLista> itens) {
+		this.itens = itens;
 	}
+
+	
+
+	
 	
 	
 	

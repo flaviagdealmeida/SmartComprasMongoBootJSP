@@ -21,7 +21,8 @@ public class SistemaController {
 	public String equipe() {
 		return "equipe";
 	}
-
+	
+	
 	@RequestMapping("sobre")
 	public String sobre() {
 		return "sobre";
@@ -37,9 +38,9 @@ public class SistemaController {
 		return "sistema";
 	}
 	
-	@RequestMapping("maiorgasto")
-	public String maiorgasto() {
-		return "maiorgasto";
+	@RequestMapping("gastos")
+	public String gastos() {
+		return "gastos";
 	}
 	
 	@RequestMapping("gasto")
@@ -58,10 +59,6 @@ public class SistemaController {
 		return "localizacao";
 	}
 	
-	@RequestMapping("carrinhoproduto")
-	public String carrinho() {
-		return "carrinhoproduto";
-	}
 	
 	@RequestMapping("cadastro")
 	public String cadastro() {
@@ -77,9 +74,21 @@ public class SistemaController {
 	public String marca() {
 		return "marca";
 	}
+	
+		
+	@RequestMapping("supermercado")
+	public String supermercado() {
+		return "supermercado";
+	}
 
 	@RequestMapping("listamarca2")
 	public String listamarca2() {
 		return "listamarca2";
 	}
+
+	@RequestMapping("listadecompras")
+	public String listadecompras() {
+		return "listadecompras";
+	}
+
 }

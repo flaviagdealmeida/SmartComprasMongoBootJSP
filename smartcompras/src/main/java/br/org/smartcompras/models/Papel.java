@@ -16,14 +16,12 @@ public class Papel implements GrantedAuthority {
 	@Id
 	private String id;
 	
-	private Usuario usuario;
-	
-	private Modulo modulo;
+	private String tipo;
 	
 	
 	public String getAuthority() {
 		
-		return modulo.toString();
+		return tipo.toString();
 	}
 
 	
@@ -38,29 +36,11 @@ public class Papel implements GrantedAuthority {
 	}
 
 
-	public Usuario getUsuario() {
-		return usuario;
-	}
-
-
-	public void setUsuario(Usuario usuario) {
-		this.usuario = usuario;
-	}
-
-
-	public Modulo getModulo() {
-		return modulo;
-	}
-
-
-	public void setModulo(Modulo modulo) {
-		this.modulo = modulo;
-	}
-
+	
 
 	@Override
 	public String toString() {
-		return "Papel [id=" + id + ", modulo=" + modulo + "]";
+		return "Papel [id=" + id + ", tipo=" + tipo + "]";
 	}
 
 	

@@ -1,7 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ page import="java.util.*" %>
+<%@ page import="br.org.smartcompras.models.*" %>
+
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -15,76 +18,19 @@
 	<jsp:include page="menu.jsp"></jsp:include>
 
 
-	<div class="container" style="background-color: transparent;">
-
-		<div id="jssor_1"
-			style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 600px; height: 300px; overflow: hidden; visibility: hidden;">
-			<!-- Loading Screen -->
-			<div data-u="loading"
-				style="position: absolute; top: 0px; left: 0px; background-color: rgba(0, 0, 0, 0.7);">
-				<div
-					style="filter: alpha(opacity = 70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
-				<div
-					style="position: absolute; display: block; background: url('img/loading.gif') no-repeat center center; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
-			</div>
-			<div data-u="slides"
-				style="cursor: default; position: relative; top: 0px; left: 0px; width: 600px; height: 300px; overflow: hidden;">
-				<a data-u="any" href="http://www.jssor.com" style="display: none">Banner
-					Rotator</a>
-				<div>
-					<img data-u="image" src="img/alimentos/01.jpg" />
-				</div>
-				<div>
-					<img data-u="image" src="img/alimentos/02.jpg" />
-				</div>
-				<div>
-					<img data-u="image" src="img/alimentos/03.jpg" />
-				</div>
-				<div>
-					<img data-u="image" src="img/alimentos/04.jpg" />
-				</div>
-				<div>
-					<img data-u="image" src="img/alimentos/05.jpg" />
-				</div>
-				<div>
-					<img data-u="image" src="img/alimentos/06.jpg" />
-				</div>
-				<div>
-					<img data-u="image" src="img/alimentos/07.jpg" />
-				</div>
-				<div>
-					<img data-u="image" src="img/alimentos/08.jpg" />
-				</div>
-				<div>
-					<img data-u="image" src="img/alimentos/09.jpg" />
-				</div>
-				<div>
-					<img data-u="image" src="img/alimentos/10.jpg" />
-				</div>
-			</div>
-			<!-- Bullet Navigator -->
-			<div data-u="navigator" class="jssorb01"
-				style="bottom: 16px; right: 16px;">
-				<div data-u="prototype" style="width: 12px; height: 12px;"></div>
-			</div>
-
-		</div>
-		<!-- #endregion Jssor Slider End -->
-	</div>
-
 	<div class="container">
 
 		<nav class="navbar navbar-inverse" id="menu">
 
-		<div class="container-fluid">
-			<div class="collapse navbar-collapse"
-				id="bs-example-navbar-collapse-1">
-				<ul class="nav navbar-nav navbar-right clearfix">
-					<li class="active"><a href="#" rel="nofolow">Sua
-							Lista(${carrinhoCompras.totalItens}) </a></li>
-				</ul>
+			<div class="container-fluid">
+				<div class="collapse navbar-collapse"
+					id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right clearfix">
+						<li class="active"><a href="#" rel="nofolow">Sua
+								Lista(${carrinhoCompras.totalItens}) </a></li>
+					</ul>
+				</div>
 			</div>
-		</div>
 		</nav>
 
 
@@ -94,7 +40,7 @@
 			<h2>Lista de Compras</h2>
 		</div>
 
-<form action="" method="post">
+		<form action="" method="post">
 		<div class="container-fluid">
 		
 			<div class="row">
@@ -146,26 +92,6 @@
 			
 		</div>
 	</form>
-	
-	<nav>
-	
-		 <table id="minhaTabela" border="1">
-            <tr>
-                <td>
-                   Produto
-                </td>
-                <td>
-                    Quantidade
-                </td>
-            </tr>
-             </table>	
-     
-        <input type="button" value="Inserir Linha" onclick="inserirLinhaTabela()"  />
-            
-	
-	</nav>
-	
-	
 	</div>
 
 
@@ -178,8 +104,7 @@
 
 
 
-	<jsp:include page="rodape.jsp"></jsp:include>
-
+			<jsp:include page="rodape.jsp"></jsp:include>
 </body>
 
 <!-- CSS -->
@@ -214,37 +139,34 @@
 
 
 <script>
-        // Função responsável por inserir linhas na tabela
-        function inserirLinhaTabela() {
-        	 var produto = document.getElementById("produtos").value;
-        	 var quantidade = document.getElementById("quantidade").value;
-            // Captura a referência da tabela com id “minhaTabela”
-             var table = document.getElementById("minhaTabela");
-            // Captura a quantidade de linhas já existentes na tabela
-            var numOfRows = table.rows.length;
-            // Captura a quantidade de colunas da última linha da tabela
-            var numOfCols = table.rows[numOfRows-1].cells.length;
+	// Função responsável por inserir linhas na tabela
+	function inserirLinhaTabela() {
+		var produto = document.getElementById("produtos").value;
+		var quantidade = document.getElementById("quantidade").value;
+		// Captura a referência da tabela com id “minhaTabela”
+		/*   var table = document.getElementById("minhaTabela");
+		  // Captura a quantidade de linhas já existentes na tabela
+		  var numOfRows = table.rows.length;
+		  // Captura a quantidade de colunas da última linha da tabela
+		  var numOfCols = table.rows[numOfRows-1].cells.length;
+		  // Insere uma linha no fim da tabela.
+		  var newRow = table.insertRow(numOfRows);
+		
+		 
+		  
+		  // Faz um loop para criar as colunas
+		  for (var j = 0; j < numOfCols; j++) {
+		      // Insere uma coluna na nova linha 
+		      newCell = newRow.insertCell(j);
+		      // Insere um conteúdo na coluna
+		     	// newCell.innerHTML = "Linha "+ numOfRows + " – Coluna "+ j;
+		      newCell.innerHTML = "Produto "+ produto + " – Quantidade "+ quantidade;
+		  }
+		  
+		 */
+		alert(produto + " - " + quantidade);
 
-            // Insere uma linha no fim da tabela.
-            var newRow = table.insertRow(numOfRows);
- 
-           
-            
-            // Faz um loop para criar as colunas
-            for (var j = 0; j < 1; j++) {
-                // Insere uma coluna na nova linha 
-                newCell = newRow.insertCell(j);
-            //    newCell = newRow.
-                // Insere um conteúdo na coluna
-               	// newCell.innerHTML = "Linha "+ numOfRows + " – Coluna "+ j;
-                newCell.innerHTML = "Produto "+ produto;
-                newCell.innerHTML = "Quantidade "+ quantidade
-            }
-            
- 
- 	alert(produto+" - "+quantidade);
- 
-        } 
+	}
 </script>
 
 <!-- Slider -->
@@ -258,7 +180,6 @@
 <script src="js/jssor.slider-22.2.6.mini.js" type="text/javascript"></script>
 <script type="text/javascript">
 	jQuery(document).ready(function($) {
-
 		var jssor_1_SlideshowTransitions = [ {
 			$Duration : 1200,
 			x : 0.2,
@@ -434,7 +355,6 @@
 				$Top : 1.5
 			}
 		} ];
-
 		var jssor_1_options = {
 			$AutoPlay : true,
 			$SlideshowOptions : {
@@ -449,9 +369,7 @@
 				$Class : $JssorBulletNavigator$
 			}
 		};
-
 		var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
-
 		/*responsive code begin*/
 		/*you can remove responsive code if you don't want the slider scales while window resizing*/
 		function ScaleSlider() {
@@ -510,7 +428,6 @@
 .jssorb01 .dn, .jssorb01 .dn:hover {
 	background-color: #555555;
 }
-
 /* jssor slider arrow navigator skin 05 css */
 /*
         .jssora05l                  (normal)

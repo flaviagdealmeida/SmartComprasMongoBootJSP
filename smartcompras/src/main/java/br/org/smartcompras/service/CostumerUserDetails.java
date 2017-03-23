@@ -1,7 +1,12 @@
 package br.org.smartcompras.service;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import org.bson.Document;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -18,6 +23,8 @@ public class CostumerUserDetails implements UserDetailsService {
 	@Autowired
 	private MongoClient mongoClient;
 
+	private Set<GrantedAuthority> authorities;
+
 	@Override
 	public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
 
@@ -30,15 +37,21 @@ public class CostumerUserDetails implements UserDetailsService {
 
 			String password = document.getString("senha");
 			String emailFind = document.getString("email");
-			//String nome = document.getString("nome");
-			// String username = document.getString("username");
-			//String autorizacao = document.getString("role");
-			//List<String> authorities = (List<String>) document.get("authorities");
+			String nome = document.getString("nome");
+			String autorizacao = document.getString("role");
+
+		//	List<String> authorities = (List<String>) document.get("authorities");
 
 			// MongoUserDetails mongoUserDetails = new
 			// MongoUserDetails(emailFind, password,authorities.toArray(new
 			// String[authorities.size()]));
-			MongoUserDetails mongoUserDetails = new MongoUserDetails(emailFind, password);
+
+			authorities = new HashSet<>();
+            authorities.add(new SimpleGrantedAuthority(autorizacao));
+			
+			MongoUserDetails mongoUserDetails = new MongoUserDetails(emailFind, password, authorities);
+
+			// authorities.toArray(new String[authorities.size()])
 
 			return mongoUserDetails;
 		} else {

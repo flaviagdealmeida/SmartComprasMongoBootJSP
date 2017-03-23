@@ -1,27 +1,23 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>  
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+	pageEncoding="UTF-8"%>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+
+<!DOCTYPE html>
 <html>
 <head>
-<title>SmartCompras</title>
-<meta charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-
-<link rel="stylesheet" href="css/stylehome.css" />
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-<link rel="stylesheet"
-	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-<link
-	href="https://fonts.googleapis.com/css?family=Catamaran|Hammersmith+One|Imprima"
-	rel="stylesheet" />
-
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+<title>SmartCompras</title>
+	
+	
+	<link rel="stylesheet" href="css/stylehome.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<link href="https://fonts.googleapis.com/css?family=Catamaran|Hammersmith+One|Imprima" 	rel="stylesheet" />
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
 
@@ -32,7 +28,8 @@
 			</div>
 
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="login"><i class="fa fa-user-circle fa-2x" aria-hidden="true"></i> Login</a></li>
+				<li><a href="login"><i class="fa fa-user-circle fa-2x"
+						aria-hidden="true"></i> Login</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -50,7 +47,7 @@
 		</ol>
 
 		<!-- Wrapper for slides -->
-		<c:url value="img" var="imgPath"/>
+		<c:url value="img" var="imgPath" />
 		<div class="carousel-inner" role="listbox">
 			<div class="item active">
 				<img src="img/slider/slider1.jpg" alt="slider1" />
@@ -89,61 +86,7 @@
 		</a>
 	</div>
 
-	<!-- Modal -->
-	<div class="modal" id="logar" role="dialog">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<h4 class="modal-title">Login</h4>
-				</div>
-
-				<div class="modal-body">
-					<form class="form-horizontal">
-						<div class="form-group">
-							<div class="col-sm-6">
-								<input type="text" class="form-control" id="inputEmail"
-									placeholder="Digite seu Email" />
-							</div>
-						</div>
-						<div class="form-group">
-							<div class="col-sm-6">
-								<input type="password" class="form-control" id="inputPassword"
-									placeholder="Digite sua Password" />
-							</div>
-						</div>
-						<div class="form-group">
-							<div class="col-sm-6">
-								<label> <a href="#">Esqueceu a senha? </a>
-								</label>
-							</div>
-						</div>
-					</form>
-				</div>
-				<div class="modal-footer">
-					<div class="form-group">
-						<div class="col-lg-10 col-lg-offset-2">
-							<a href="sistema">
-								<button type="submit" class="btn btn-warning">Logar</button>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- Fim logar -->
-	<!-- Modal Cadastrar -->
-
-
-	<!-- Trigger the modal with a button -->
-
-
-
-
-
-	<!-- Fim logar -->
+	
 
 	<div class="container">
 		<div class="banner">
@@ -198,7 +141,7 @@
 	</div>
 	<footer>
 
-		<%@ include file="rodape.jsp" %>
+		<%@ include file="rodape.jsp"%>
 	</footer>
 </body>
 
