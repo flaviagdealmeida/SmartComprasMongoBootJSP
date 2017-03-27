@@ -56,7 +56,7 @@
 				</div>
 						
 				<div class="row">
-				<form:form method="POST" action="/cart/addProduto">
+				<form:form method="POST" action="/addProduto">
 				<table class="table table-striped table-hover " id="titulos">
 					<thead>
 						<tr>

@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -11,25 +11,73 @@
 	
 	<div class="container">
 
-	<div class="container-fluid"  id="form-listagem" >
-		<form class="form-horizontal supermercado" action="/addsupermercados" method="POST">
-			<fieldset id="formsupermercados">
-				<legend>Supermercado</legend>
-				<p>
-					<label class="control-label" for="supermercado">Supermercado</label> <input
-						class="form-control input-sm" type="text" id="supermercado" name="supermercado"
-						size="40" />
-				</p>
-				<div class="col-lg-10 col-lg-offset-4">
-					<p>
-						<button type="submit" class="btn btn-primary">Cadastrar</button>
+	<form class="form-horizontal cadastro" action="addsupermercados" method="post">
+			<fieldset>
+				<legend>Novo Supermercado</legend>
+				<div class="form-group"  id="cad">					
+					<div class="col-lg-10">
+						<input type="text" class="form-control" id="inputNome"  name="supermercado"
+							placeholder="Supermercado" />
+					</div>
+				</div>
+				<div class="form-group"  id="cad">					
+					<div class="col-lg-10">
+						<input type="text" class="form-control" id="inputNome"  name="cnpj"
+							placeholder="CNPJ" />
+					</div>
+				</div>
+				<div class="form-group"  id="cad">					
+					<div class="col-lg-10">
+						<input type="text" class="form-control" id="inputNome"  name="contato"
+							placeholder="Responsavel Contato" />
+					</div>
+				</div>
+				<div class="form-group"  id="cad">					
+					<div class="col-lg-10">
+						<input type="email" class="form-control" id="inpuEmail"
+							placeholder="Email" name="email"/>
+					</div>
+				</div>
+				
+				<input type="hidden" class="form-control" id="inpuRole"  name="permissao" value="ROLE_GEST"/>
+					
+				<div class="form-group"  id="cad">
+					
+					<div class="col-lg-10">
+						<input type="text" class="form-control" id="inputCep"
+							placeholder="CEP" name="cep"/>
+					</div>
+				</div>
+				<div class="form-group"  id="cad">
+					
+					<div class="col-lg-10">
+						<input type="text" class="form-control" id="inputCompl"
+							placeholder="Complemento" name="complemento"/>
+					</div>
+				</div>
+				<div class="form-group"  id="cad">					
+					<div class="col-lg-10">
+						<input type="tel" class="form-control" id="inputFone"
+							placeholder="Telefone" name="telefone"/>
+					</div>
+				</div>
+				<div class="form-group" id="cad">
+					
+					<div class="col-lg-10">
+						<input type="password" class="form-control" id="inputSenha"
+							placeholder="Senha" name="senha"/>
+						
+					</div>
+				</div>
+				<div class="form-group" id="cad">
+					<div class="col-lg-10 col-lg-offset-2">
+						<button type="submit" class="btn btn-warning">Cadastrar</button>
 						<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
-						<button type="reset" class="btn btn-warning">Cancel</button>
-						</p>
+						<button type="reset" class="btn btn-primary">Cancelar</button>
+					</div>
 				</div>
 			</fieldset>
 		</form>
-	</div>
 
 	
 	</div>

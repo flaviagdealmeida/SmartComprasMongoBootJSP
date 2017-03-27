@@ -45,8 +45,10 @@
 		</div>
 	</div>
 
-
+<footer>
 	<jsp:include page="rodape.jsp"></jsp:include>
+</footer>
+
 </body>
 <!-- CSS -->
 <link rel="stylesheet" href="css/estiloprodutos.css" />

@@ -51,7 +51,22 @@
 					</select>
 				
 
+				</div><div class="form-group">
+					<label for="supermercado" class="control-label">Supermercado</label> 
+				
+					<select class="form-control" name="marca">
+					<c:forEach var="super" items="${listSupermercado}">		
+						<option value=${super.supermercado}>${super.supermercado}</option>
+					</c:forEach>
+					</select>
+				
+
 				</div>
+				
+				
+				
+				
+				
 				<div class="form-group">
 					<label for="tipo" class="control-label">Tipo Produto</label> <select
 						class="form-control" id="tipoProduto" name="tipoProduto">

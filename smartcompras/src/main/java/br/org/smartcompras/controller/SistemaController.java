@@ -75,7 +75,13 @@ public class SistemaController {
 		return "marca";
 	}
 	
-		
+	
+	@RequestMapping("/erro404")
+	public String erro404() {
+		return "erro404";
+	}
+	
+	
 	@RequestMapping("supermercado")
 	public String supermercado() {
 		return "supermercado";
@@ -85,10 +91,26 @@ public class SistemaController {
 	public String listamarca2() {
 		return "listamarca2";
 	}
+	
+//	@RequestMapping("listadecompras2")
+//	public String listadecompras2() {
+//		return "listadecompras2";
+//	}
+	
+//	@RequestMapping("carrinho2")
+//	public String carrinho2() {
+//		return "carrinho2";
+//	}
 
-	@RequestMapping("listadecompras")
-	public String listadecompras() {
-		return "listadecompras";
+	@RequestMapping("rodape")
+	public String rodape() {
+		return "rodape";
 	}
-
+	
+	@RequestMapping("importararquivo")
+	public String importararquivo() {
+		return "importararquivo";
+	}
+	
+	
 }

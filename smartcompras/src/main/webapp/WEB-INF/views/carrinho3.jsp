@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>SmartCompras</title>
 </head>
 <body ng-controller="FotosController" class="ng-scope">
@@ -17,30 +17,33 @@
 			<form action="#">
 				<fieldset>
 					<legend>Carrinho de Compras</legend>
-					<a href="listadecompras2">Continuar Comprando</a>
+					<a href="listadecompras3">Continuar Comprando</a>
 					<table class="table table-striped table-hover">
 						<thead>
 							<tr>
 								<th>Produto</th>
+								<th>Tipo Produto</th>
 								<th>Quantidade</th>
 								<th>Remover</th>
-								
 							</tr>
 						</thead>
-						<c:forEach var="it" items="${sessionScope.cart}">
+						<c:forEach var="ListaCompras" items="${itens}">
 							<tbody>
 								<tr>
-									<td>${it.produto.produto}</td>
-									<td>Qtde<input type="number" value="quantidade" /></td>
-									<td class="coluna"><button class="btn btn-danger btn-sm"
-											type="submit" value="" name="">
+									<td>${ListaCompras.produto}</td>
+									<td>${ListaCompras.marca}</td>
+									<td>${ListaCompras.tipoProduto}</td>
+									<td><!--button class="btn btn-danger btn-sm"type="submit" value="" name="">
 											
-								<i class="fa fa-trash fa-lg" aria-hidden="true"></i></button></td>
+									<i class="fa fa-trash fa-lg" aria-hidden="true"></i>
+								
+									</button--></td>
 								</tr>
 							</tbody>
 						</c:forEach>
-						<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+						
 					</table>
+					<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
 				</fieldset>
 			</form>
 		</div>

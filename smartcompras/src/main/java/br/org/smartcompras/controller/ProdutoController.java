@@ -1,7 +1,6 @@
 package br.org.smartcompras.controller;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
@@ -88,6 +87,11 @@ public class ProdutoController {
 
 		return "redirect:produto";
 	}
+	
+
+	
+	
+	
 	
 	
 }

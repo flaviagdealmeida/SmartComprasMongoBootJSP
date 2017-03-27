@@ -21,11 +21,9 @@
 	<jsp:include page="menu.jsp"></jsp:include>
 
 		<div class="container">
-			<img alt="error" src="error.jpg">
+			<img  class="img-responsive" alt="error" src="img/error.jpg">
 		</div>
 
 	<jsp:include page="rodape.jsp"></jsp:include>
-
-
 </body>
 </html>

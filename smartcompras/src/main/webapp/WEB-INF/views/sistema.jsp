@@ -73,10 +73,9 @@
 
 
 
-	<footer>
-
-		<%@ include file="rodape.jsp" %>
-	</footer>
+	
+	<jsp:include page="rodape.jsp"></jsp:include>
+	
 	
 </body>
 <!-- CSS -->

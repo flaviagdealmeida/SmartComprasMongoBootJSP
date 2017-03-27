@@ -1,39 +1,41 @@
 package br.org.smartcompras.models;
 
-public class Item {
+import java.util.List;
 
-	private Produto Produto;
-	private Integer quantidade;
+import org.springframework.data.annotation.Id;
+
+public class Item{
+
+	@Id
+	private String id;
 	
+	private String nomeLista;
+	
+	private List<Produto> produtos;
 		
-	
-	public Item(Produto produto, Integer quantidade) {
-		super();
-		Produto = produto;
-		this.quantidade = quantidade;
+	public String getId() {
+		return id;
 	}
 
-
-
-	public Produto getProduto() {
-		return Produto;
-	}
-	public void setProduto(Produto produto) {
-		Produto = produto;
+	public void setId(String id) {
+		this.id = id;
 	}
 
-
-	public Integer getQuantidade() {
-		return quantidade;
+	public String getNomeLista() {
+		return nomeLista;
 	}
 
-
-	public void setQuantidade(Integer quantidade) {
-		this.quantidade = quantidade;
+	public void setNomeLista(String nomeLista) {
+		this.nomeLista = nomeLista;
 	}
-
 
 	
-	
-	
+
+	public List<Produto> getProdutos() {
+		return produtos;
+	}
+
+	public void setProdutos(List<Produto> produtos) {
+		this.produtos = produtos;
+	}
 }

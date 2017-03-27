@@ -15,23 +15,19 @@
 	<div class="container">
 		<div class="container-fluid" id="form-listagem">
 			
-					<legend>Carrinho de Compras</legend>
-					<a href="listadecompras3">Continuar Comprando</a>
+					<h3>Carrinho de Compras</h3>
+					<a href="listadecompras">Continuar Comprando</a>
 					<table class="table table-striped table-hover">
 						<thead>
 							<tr>
 								<th>Produto</th>
-								<th>Marca</th>
-								<th>Quantidade</th>
-								<th>Remover</th>
+								
 							</tr>
 						</thead>
-						<c:forEach var="item" items="${carrinho2.itens}">
+						<c:forEach var="item" items="${itemList}">
 							<tbody>
 								<tr>
-									<td>${item.produto.produto}</td>
-									<td>${item.produto.marca}</td>
-									<td>${item.quantidade}</td>
+									<td>${item.produtos}</td>
 								</tr>
 							</tbody>
 						</c:forEach>

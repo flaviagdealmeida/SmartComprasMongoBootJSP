@@ -28,28 +28,30 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		http.authorizeRequests()
 		.antMatchers("/home").permitAll()
 		.antMatchers("/cadastro").permitAll()
-		.antMatchers("/produto").hasRole("ADMIN")
-		.antMatchers("/listaproduto").hasRole("ADMIN")
-		.antMatchers("/marca").hasRole("ADMIN")
-		.antMatchers("/listamarca").hasRole("ADMIN")
+		.antMatchers("/produto").hasAnyRole("ADMIN", "GEST")
+		.antMatchers("/listaproduto").hasAnyRole("ADMIN", "GEST")
+		.antMatchers("/marca").hasAnyRole("ADMIN", "GEST")
+		.antMatchers("/listamarca").hasAnyRole("ADMIN", "GEST")
 		.antMatchers("/supermercado").hasRole("ADMIN")
 		.antMatchers("/listasupermercado").hasRole("ADMIN")
-		.antMatchers("/listapredefinida").hasRole("ADMIN")
-		.antMatchers("/listaspre").hasRole("ADMIN")
-		.antMatchers("/listapredefinida").hasRole("ADMIN");
-
-
+		.antMatchers("/listadecompras").hasRole("ADMIN")
+		.antMatchers("/listapredefinida").hasAnyRole("ADMIN", "GEST")
+		.antMatchers("/listaspre").hasAnyRole("ADMIN", "GEST")
+		.antMatchers("/importararquivo").hasAnyRole("ADMIN", "GEST")
+		.and()
+		.exceptionHandling().accessDeniedPage("/erro404");
+				
+		
 		
 		http
     	.authorizeRequests().antMatchers("/WEB-INF/views/**")
-    	.hasAnyAuthority("ROLE_ADMIN", "ROLE_USER").anyRequest().authenticated();
-	
+    	.hasAnyAuthority("ROLE_ADMIN", "ROLE_USER", "ROLE_GEST").anyRequest().authenticated();
+
+    		
 	http.formLogin()
         .loginPage("/login").defaultSuccessUrl("/sistema", true)
         .permitAll()
         .and()
-//    .logout()
-//        .permitAll();
         .logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout")).logoutSuccessUrl("/login");
 		
 	}
@@ -67,6 +69,5 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		web.ignoring().antMatchers("/bootstrap/**");
 		web.ignoring().antMatchers("/js/**");
 		web.ignoring().antMatchers("/img/**");
-
 	}
 }

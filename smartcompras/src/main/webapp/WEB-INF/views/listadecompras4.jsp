@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html xmlns:th="http://www.thymeleaf.org" ng-app="imagens">
+<!DOCTYPE html>
+<html ng-app="imagens">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="viewport" content="width-device-width" />
@@ -12,55 +12,46 @@
 
 	<jsp:include page="menu.jsp"></jsp:include>
 
-
 	<div class="container">
 
-		<div class="container-fluid">
-
-			<form action="/delprodutoslista" method="POST">
-				<table class="table table-striped table-hover " id="titulos">
-					<thead>
-						<tr>
-							<th width="200px">Imagem Produto</th>
-							<th class="tit">Produto</th>
-							<th class="tit">Imagem do Produto</th>
-							<th class="tit">Tipo de Produto</th>
-							<th class="tit">Marca</th>
-							<th class="tit">Excluir</th>
-							<th class="tit">Alterar</th>
-
-						</tr>
-					</thead>
-					<tbody>
-						<c:forEach var="produto" items="${list}">
-
-							<tr>
-								<td><img class="imgtable" th:src="${produto.imgProduto}"
-									alt="${produto.produto}" /></td>
-								<td class="tit"><c:out value="${produto.produto}" /></td>
-								<td class="tit"><c:out value="${produto.imgProduto}" /></td>
-								<td class="tit"><c:out value="${produto.tipoProduto}" /></td>
-								<td class="tit"><c:out value="${produto.marca}" /></td>
-								<td class="coluna tit"><button 	class="btn btn-danger btn-sm" type="submit"
-										<c:out value="*{produto.id}" /> name="removerProdutos">
-									Excluir</button></td>
-							<td class="coluna tit"><button
-									class="btn btn-warning btn-sm" type="submit"
-									th:value="*{produto.id}" name="alterarProdutos">
-									Alterar</button></td>
-
-							</tr>
+		<form class="form-horizontal form-produtos" action="/addProduto" method="POST">
+			<fieldset>
+				<legend>Lista Compras</legend>
+				<p>
+					<label class="control-label" for="nomeLista">Nome Lista</label> <input
+						class="form-control" type="text" id="nomeLista" name="nomeLista"
+						size="40" />
+				</p>
+				<p>
+					<input class="form-control" type="hidden" id="tipoLista"
+						name="tipoLista" size="40" value="predefinida" />
+				</p>
+ 
+				<div class="checkbox">
+					<ul>
+						<c:forEach var="produto" items="${produtoList}">
+						<li >
+							<input type="checkbox" value=${produto.produto} id="produtos" name="produto" />${produto.produto}
+							
+						</li>
 						</c:forEach>
+					</ul>
 
-					</tbody>
-				</table>
+				</div>
 
-			</form>
+				<div class="col-lg-10 col-lg-offset-4 botoes">
+					<input type="submit" class="btn btn-primary" value="Cadastrar" />
+					<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
+					<button type="reset" class="btn btn-warning">Cancelar</button>
+				</div>
+			</fieldset>
+		</form>
 
-		</div>
 
 	</div>
+<footer>
 	<jsp:include page="rodape.jsp"></jsp:include>
+</footer>
 
 </body>
 <!-- CSS -->
@@ -89,7 +80,13 @@
 	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-route.min.js"></script>
 <script src="js/main.js"></script>
 <script src="js/controllers/fotos-controller.js"></script>
+<script src="js/droplist.js"></script>
 <!-- Angular -->
+<script>
+	
+	
 
+
+</script>
 
 </html>

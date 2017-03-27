@@ -31,17 +31,17 @@ public class ListaProdutoController {
 		return "listaproduto";
 	}
 		
-//	@RequestMapping("/listadecompras3")	
-//	public String produtosList(Model model) {
-//		model.addAttribute("produtoList", produtoRepository.findAll());
-//		return "listadecompras3";
-//	}	
-	
-	@RequestMapping("/listadecompras2")	
+	@RequestMapping("/listadecompras")	
 	public String produtosList(Model model) {
 		model.addAttribute("produtoList", produtoRepository.findAll());
-		return "listadecompras2";
+		return "listadecompras";
 	}	
+//	
+//	@RequestMapping("/listadecompras2")	
+//	public String produtosList(Model model) {
+//		model.addAttribute("produtoList", produtoRepository.findAll());
+//		return "listadecompras2";
+//	}	
 	
 	 	 	
 	@RequestMapping("/api/listaimgproduto")

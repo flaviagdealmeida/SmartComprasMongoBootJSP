@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html ng-app="imagens">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -41,7 +41,7 @@
 
 				<div class="col-lg-10 col-lg-offset-4 botoes">
 					<input type="submit" class="btn btn-primary" value="Cadastrar" />
-					<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+					<!-- input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" /-->
 					<button type="reset" class="btn btn-warning">Cancelar</button>
 				</div>
 			</fieldset>
@@ -49,8 +49,9 @@
 
 
 	</div>
-
+<footer>
 	<jsp:include page="rodape.jsp"></jsp:include>
+</footer>
 
 </body>
 <!-- CSS -->

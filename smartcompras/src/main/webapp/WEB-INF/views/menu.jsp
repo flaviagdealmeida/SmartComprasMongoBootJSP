@@ -2,7 +2,8 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="s"%>
-<%@ taglib uri="http://www.springframework.org/security/tags" prefix="security"%>
+<%@ taglib uri="http://www.springframework.org/security/tags"
+	prefix="security"%>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="s"%>
 <%@ taglib uri="http://www.springframework.org/security/tags"
 	prefix="security"%>
@@ -15,14 +16,15 @@
 
 <style>
 .dropdown-submenu {
-    position: relative;
-}
+  	position: relative;
 
-.dropdown-submenu .dropdown-menu {
-    top: 0;
-    left: 100%;
-    margin-top: -1px;
-}
+
+.dropdown-submenu .dropdown-menu {	top: 0;
+	left: 100%;
+	margin-top: -1px;
+
+
+
 </style>
 
 </head>
@@ -43,7 +45,7 @@
 						data-toggle="dropdown" role="button" aria-haspopup="true"
 						aria-expanded="false">Lista <span class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li><a tabindex="-1" href="listadecompras2">Lista de Compras</a></li>
+							<li><a tabindex="-1" href="listadecompras">Lista de Compras</a></li>
 							<li><a tabindex="-1" href="#">Minhas Listas</a></li>
 							<li class="dropdown-submenu">
 							<a class="test" tabindex="-1" href="#">Predefinidas <span class="caret"></span></a>
@@ -79,14 +81,23 @@
 								<li><a href="listasupermercado">Lista Supermercado</a></li>
 								<li><a href="listapredefinida">Cadastro Lista Predefinida</a></li>
 								<li><a href="listaspre">Listas Predefinida</a></li>
-
+								<li><a href="importararquivo">Importar CSV</a></li>
+							</ul></li>
+					</security:authorize>
+					
+					<security:authorize access="hasRole('ROLE_GEST')">
+						<li class="dropdown"><a href="#" class="dropdown-toggle"
+							data-toggle="dropdown" role="button" aria-haspopup="true"
+							aria-expanded="false">Painel Supermercados <span
+								class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="importararquivo">Importar CSV</a></li>
 							</ul></li>
 					</security:authorize>
 				</ul>
 
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#"><c:out
-								value="${pageContext.request.remoteUser}"></c:out></a></li>
+					<li><a href="#"><c:out value="${pageContext.request.remoteUser}"></c:out></a></li>
 					<li><a href="logout"> Logout </a> <input type="hidden"
 						name="${_csrf.parameterName}" value="${_csrf.token}" /></li>
 				</ul>

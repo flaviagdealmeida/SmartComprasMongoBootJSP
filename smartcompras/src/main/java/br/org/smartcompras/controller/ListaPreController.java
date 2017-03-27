@@ -27,7 +27,6 @@ public class ListaPreController {
 	ProdutoMongoRepository produtoRepository;
 	
 	 
-	
 	@RequestMapping(value = "/addlistapre", method = RequestMethod.POST)
 	@CacheEvict(value="preLista", allEntries=true)
 	public String addProdutos(@ModelAttribute Predefinida predefinida) {
@@ -56,15 +55,7 @@ public class ListaPreController {
 		return "listaspre";
 	}
 
-	
-	@RequestMapping("/listaprechurrasco")
-	public String preListaChurrasco(Model model) {
-		model.addAttribute("preListaChurrasco", preRepository.findAll());
-		return "listaprechurrasco";
-	}
-	
-	
-	
+		
 	@RequestMapping("/menu")
 	public String preListas(Model model) {
 		model.addAttribute("preListas", preRepository.findAll());
