@@ -16,15 +16,28 @@
 
 <style>
 .dropdown-submenu {
+<<<<<<< HEAD
   	position: relative;
 
+=======
+	position: relative;
+}
+>>>>>>> refs/remotes/origin/master
 
+<<<<<<< HEAD
 .dropdown-submenu .dropdown-menu {	top: 0;
 	left: 100%;
 	margin-top: -1px;
 
 
 
+=======
+.dropdown-submenu .dropdown-menu {
+	top: 0;
+	left: 100%;
+	margin-top: -1px;
+}
+>>>>>>> refs/remotes/origin/master
 </style>
 
 </head>
@@ -45,19 +58,22 @@
 						data-toggle="dropdown" role="button" aria-haspopup="true"
 						aria-expanded="false">Lista <span class="caret"></span></a>
 						<ul class="dropdown-menu">
+<<<<<<< HEAD
 							<li><a tabindex="-1" href="listadecompras">Lista de Compras</a></li>
+=======
+							<li><a tabindex="-1" href="listadecompras2">Lista de
+									Compras</a></li>
+>>>>>>> refs/remotes/origin/master
 							<li><a tabindex="-1" href="#">Minhas Listas</a></li>
-							<li class="dropdown-submenu">
-							<a class="test" tabindex="-1" href="#">Predefinidas <span class="caret"></span></a>
+							<li class="dropdown-submenu"><a class="test" tabindex="-1"
+								href="#">Predefinidas <span class="caret"></span></a>
 								<ul class="dropdown-menu">
 									<c:forEach var="predefinida" items="${preListas}">
 										<li><a tabindex="-1" href="#">${predefinida.nomeLista}</a></li>
-									</c:forEach>	
+									</c:forEach>
 									<li><a tabindex="-1" href="listaprechurrasco">Churrasco</a></li>
-								</ul>
-							</li>
-						</ul>
-					</li>
+								</ul></li>
+						</ul></li>
 					<li><a href="localizacao">Localização</a></li>
 					<li class="dropdown"><a href="localizacao"
 						class="dropdown-toggle" data-toggle="dropdown" role="button"
@@ -67,7 +83,7 @@
 							<li><a href="gastos">Gastos</a></li>
 						</ul></li>
 
-					<security:authorize access="hasRole('ROLE_ADMIN')">
+					<security:authorize access="hasAnyRole('ROLE_ADMIN', 'ROLE_GEST')">
 						<li class="dropdown"><a href="#" class="dropdown-toggle"
 							data-toggle="dropdown" role="button" aria-haspopup="true"
 							aria-expanded="false">Painel Administrativo <span
@@ -77,9 +93,12 @@
 								<li><a href="listaproduto">Lista de Produtos</a></li>
 								<li><a href="marca">Cadastro Marca</a></li>
 								<li><a href="listamarca">Lista de Marca</a></li>
-								<li><a href="supermercado">Cadastro Supermercado</a></li>
-								<li><a href="listasupermercado">Lista Supermercado</a></li>
-								<li><a href="listapredefinida">Cadastro Lista Predefinida</a></li>
+								<security:authorize access="hasRole('ROLE_ADMIN')">
+									<li><a href="supermercado">Cadastro Supermercado</a></li>
+									<li><a href="listasupermercado">Lista Supermercado</a></li>
+								</security:authorize>
+								<li><a href="listapredefinida">Cadastro Lista
+										Predefinida</a></li>
 								<li><a href="listaspre">Listas Predefinida</a></li>
 								<li><a href="importararquivo">Importar CSV</a></li>
 							</ul></li>
@@ -110,15 +129,15 @@
 
 	</nav>
 
-<script>
-$(document).ready(function(){
-  $('.dropdown-submenu a.test').on("click", function(e){
-    $(this).next('ul').toggle();
-    e.stopPropagation();
-    e.preventDefault();
-  });
-});
-</script>
+	<script>
+		$(document).ready(function() {
+			$('.dropdown-submenu a.test').on("click", function(e) {
+				$(this).next('ul').toggle();
+				e.stopPropagation();
+				e.preventDefault();
+			});
+		});
+	</script>
 
 
 </body>

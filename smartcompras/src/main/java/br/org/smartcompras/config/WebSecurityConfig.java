@@ -45,9 +45,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		
 		http
     	.authorizeRequests().antMatchers("/WEB-INF/views/**")
-    	.hasAnyAuthority("ROLE_ADMIN", "ROLE_USER", "ROLE_GEST").anyRequest().authenticated();
-
-    		
+    	.hasAnyAuthority("ROLE_ADMIN", "ROLE_USER", "ROLE_GEST").anyRequest().authenticated();	
+    	
 	http.formLogin()
         .loginPage("/login").defaultSuccessUrl("/sistema", true)
         .permitAll()
