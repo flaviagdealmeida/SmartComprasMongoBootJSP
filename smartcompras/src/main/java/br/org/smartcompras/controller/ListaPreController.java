@@ -1,7 +1,12 @@
 package br.org.smartcompras.controller;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 
+import org.bson.Document;
+import org.bson.conversions.Bson;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
@@ -11,6 +16,11 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import com.mongodb.MongoClient;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
+import com.mongodb.client.model.Filters;
 
 import br.org.smartcompras.models.Predefinida;
 import br.org.smartcompras.repository.ListasPreMongoRepository;
@@ -25,6 +35,9 @@ public class ListaPreController {
 	
 	@Autowired
 	ProdutoMongoRepository produtoRepository;
+	
+	@Autowired
+	MongoClient mongoClient;
 	
 	 
 	@RequestMapping(value = "/addlistapre", method = RequestMethod.POST)
@@ -55,6 +68,24 @@ public class ListaPreController {
 		return "listaspre";
 	}
 
+	
+	@RequestMapping("/prechurrasco")
+		public String churrascoLista(){
+			mongoClient  = new MongoClient();
+			
+			MongoDatabase db = mongoClient.getDatabase("smartcompras");
+			MongoCollection<Document> coll = db.getCollection("predefinida");
+	
+			Bson filtroBuscarLista = Filters.eq("produto", "Cerveja Lata Brahma");
+	
+			List<Document> churrascoLista = coll.find(Filters.elemMatch("produtos", filtroBuscarLista))
+					.into(new ArrayList<Document>());
+		
+			return "listaprechurrasco";
+	}
+	
+	
+	
 		
 	@RequestMapping("/menu")
 	public String preListas(Model model) {

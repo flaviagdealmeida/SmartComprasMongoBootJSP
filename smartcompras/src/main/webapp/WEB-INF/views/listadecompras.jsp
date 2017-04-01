@@ -24,14 +24,26 @@
 				</p>
 				 
 				<div class="checkbox">
-					<ul>
-						<c:forEach var="produto" items="${produtoList}">
-						<li >
-							<input type="checkbox" value=${produto.id} id="produtos" name="produtos" />${produto.produto}
-							
-						</li>
-						</c:forEach>
-					</ul>
+					
+						<table class="table table-striped table-hover">
+							<thead>
+								<tr>
+									<th>Item</th>
+									<th>Produto</th>
+									<th>Marca</th>
+								</tr>
+							</thead>
+								<c:forEach var="produto" items="${produtoList}">
+							<tbody>
+									<tr>
+										<td><center><input type="checkbox" value=${produto.id} id="produtos" name="produtos"/></center></td>
+										<td>${produto.produto}</td>
+										<td>${produto.marca}</td>
+									</tr>
+								</c:forEach>
+							</tbody>
+						</table>
+				
 
 				</div>
 

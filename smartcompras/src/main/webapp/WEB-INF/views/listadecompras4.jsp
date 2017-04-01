@@ -31,7 +31,7 @@
 					<ul>
 						<c:forEach var="produto" items="${produtoList}">
 						<li >
-							<input type="checkbox" value=${produto.produto} id="produtos" name="produto" />${produto.produto}
+							<input type="checkbox" value=${produto.id} id="produtos" name="produto" />${produto.produto}
 							
 						</li>
 						</c:forEach>

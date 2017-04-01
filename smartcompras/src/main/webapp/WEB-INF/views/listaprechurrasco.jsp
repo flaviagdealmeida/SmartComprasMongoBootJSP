@@ -45,13 +45,11 @@
 		<div class="container-fluid">
 		
 			<div class="row">
-				<c:forEach items="${preListaChurrasco}" var="produto">
+				<c:forEach items="${churrascoLista}" var="produtos">
 					<div class="col-sm-3">
 						<div class="panel panel-default">
 							<div class="panel-heading">
 								<h3 class="panel-title">${produtos.produto}</h3>
-								<input type="hidden" value=${produtos.produto} name="produto" id="produtos"/>
-								<input type="hidden" value=${produtos.id} name="produto" id="produto"/>
 							</div>
 							<div class="panel-body">
 								<div class="row">

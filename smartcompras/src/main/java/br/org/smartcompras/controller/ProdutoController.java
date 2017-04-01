@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import br.org.smartcompras.models.Produto;
 import br.org.smartcompras.repository.MarcaMongoRepository;
 import br.org.smartcompras.repository.ProdutoMongoRepository;
+import br.org.smartcompras.repository.SupermercadoMongoRepository;
 import br.org.smartcompras.validation.ProdutoValidation;
 
 
@@ -28,6 +29,9 @@ public class ProdutoController {
 	
 	@Autowired
 	MarcaMongoRepository marcaRepository;
+	
+	@Autowired
+	SupermercadoMongoRepository supermercadoRepository;
 	
 	@InitBinder
 	public void initBinder(WebDataBinder binder){
@@ -54,6 +58,7 @@ public class ProdutoController {
 	public String produtoList(Model model) {
 		model.addAttribute("produtoList", produtoRepository.findAll());
 		model.addAttribute("listMarca", marcaRepository.findAll());
+		model.addAttribute("supermercadoLista", supermercadoRepository.findAll());
 		return "produto";
 	}
 

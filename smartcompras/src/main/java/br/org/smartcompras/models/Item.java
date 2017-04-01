@@ -13,7 +13,7 @@ public class Item{
 	
 	private List<Produto> produtos;
 		
-	public String getId() {
+	public  String getId() {
 		return id;
 	}
 
@@ -38,4 +38,10 @@ public class Item{
 	public void setProdutos(List<Produto> produtos) {
 		this.produtos = produtos;
 	}
+	
+	
+	
+	
+	
+	
 }

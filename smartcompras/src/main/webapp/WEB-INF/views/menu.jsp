@@ -16,28 +16,17 @@
 
 <style>
 .dropdown-submenu {
-<<<<<<< HEAD
-  	position: relative;
 
-=======
 	position: relative;
-}
->>>>>>> refs/remotes/origin/master
 
-<<<<<<< HEAD
 .dropdown-submenu .dropdown-menu {	top: 0;
 	left: 100%;
 	margin-top: -1px;
 
-
-
-=======
 .dropdown-submenu .dropdown-menu {
 	top: 0;
 	left: 100%;
 	margin-top: -1px;
-}
->>>>>>> refs/remotes/origin/master
 </style>
 
 </head>
@@ -58,20 +47,20 @@
 						data-toggle="dropdown" role="button" aria-haspopup="true"
 						aria-expanded="false">Lista <span class="caret"></span></a>
 						<ul class="dropdown-menu">
-<<<<<<< HEAD
+
 							<li><a tabindex="-1" href="listadecompras">Lista de Compras</a></li>
-=======
+
 							<li><a tabindex="-1" href="listadecompras2">Lista de
 									Compras</a></li>
->>>>>>> refs/remotes/origin/master
-							<li><a tabindex="-1" href="#">Minhas Listas</a></li>
+
+							<li><a tabindex="-1" href="minhaslistas">Minhas Listas</a></li>
 							<li class="dropdown-submenu"><a class="test" tabindex="-1"
 								href="#">Predefinidas <span class="caret"></span></a>
 								<ul class="dropdown-menu">
 									<c:forEach var="predefinida" items="${preListas}">
 										<li><a tabindex="-1" href="#">${predefinida.nomeLista}</a></li>
 									</c:forEach>
-									<li><a tabindex="-1" href="listaprechurrasco">Churrasco</a></li>
+									<li><a tabindex="-1" href="prechurrasco">Churrasco</a></li>
 								</ul></li>
 						</ul></li>
 					<li><a href="localizacao">Localização</a></li>

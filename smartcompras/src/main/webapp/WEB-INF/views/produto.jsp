@@ -50,13 +50,14 @@
 					</c:forEach>
 					</select>
 				
-
-				</div><div class="form-group">
+				</div>
+				<div class="form-group">
+				
 					<label for="supermercado" class="control-label">Supermercado</label> 
 				
-					<select class="form-control" name="marca">
-					<c:forEach var="super" items="${listSupermercado}">		
-						<option value=${super.supermercado}>${super.supermercado}</option>
+					<select class="form-control" name="supermercado">
+					<c:forEach var="supermercado" items="${supermercadoLista}">		
+						<option value=${supermercado.id}>${supermercado.supermercado}</option>
 					</c:forEach>
 					</select>
 				
