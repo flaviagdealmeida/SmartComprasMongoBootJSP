@@ -38,6 +38,19 @@
 								<i class="fa fa-trash fa-lg" aria-hidden="true"></i></button></td>
 
 								</tr>
+								<tr>
+									<c:forEach var="itemProduto" items="${predefinida.produtos}" varStatus="index">
+										<tbody>
+											<tr>
+												<td>
+													<li>${itemProduto.produto} - ${itemProduto.marca}</li>
+												</td>
+												<td>
+												</td>
+											</tr>	
+										</tbody>
+									</c:forEach>	
+								</tr>
 							</tbody>
 							<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
 						</c:forEach>

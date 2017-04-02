@@ -41,7 +41,7 @@
 
 				<div class="col-lg-10 col-lg-offset-4 botoes">
 					<input type="submit" class="btn btn-primary" value="Cadastrar" />
-					<!-- input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" /-->
+					<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
 					<button type="reset" class="btn btn-warning">Cancelar</button>
 				</div>
 			</fieldset>
