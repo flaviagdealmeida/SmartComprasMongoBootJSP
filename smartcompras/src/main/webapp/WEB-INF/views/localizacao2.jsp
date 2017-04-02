@@ -12,26 +12,15 @@
 	<nav class="nav navbar-inverse graf" id="menu">
 		<a href="sistema"><button class="btn btn-primary" id="btnsistema">Sistema</button></a>
 	</nav>
-	<input type="hidden" id="txtLatitude" name="txtLatitude" value="-22.9068467" />
-	 <input type="hidden" id="txtLongitude" name="txtLongitude" value="-43.17289649999998" />
-<button onClick="localizarUsuario()">Minha Localização</button> <br>
 
 	<div class="container"></div>
-
 	<div id="map"></div>
 	<div id="right-panel">
 		<h2>Resultados</h2>
 		<ul id="places"></ul>
-		
-		
-
-		
 		<button id="more">Mais Resultados</button>
 
 	</div>
-
-
-<script src="mapa/maps.js"></script>
 
 	<script
 		src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCSGfv4ntRNDLddqFqpatn-rkdTqaY0zR8&amp;libraries=places&amp;callback=initMap"
@@ -73,27 +62,72 @@ html, body {
 }
 </style>
 <title>Place search pagination</title>
-
-
-
 <script>
 	var map;
-	
-	var pyrmont = {lat:-22.9068467 , lng: -43.17289649999998};
+
 	function initMap() {
-		
-	
-		  
+		var pyrmont = {
+			lat : -22.877718,
+			lng : -43.259127
+		};
 		map = new google.maps.Map(document.getElementById('map'), {
 			center : pyrmont,
 			zoom : 17
 		});
-	
 
-	
-		
+		var service = new google.maps.places.PlacesService(map);
+		service.nearbySearch({
+			location : pyrmont,
+			radius : 500,
+			types : [ 'grocery_or_supermarket' ]
+		}, processResults);
 	}
-	
+
+	function processResults(results, status, pagination) {
+		if (status !== google.maps.places.PlacesServiceStatus.OK) {
+			return;
+		} else {
+			createMarkers(results);
+
+			if (pagination.hasNextPage) {
+				var moreButton = document.getElementById('more');
+
+				moreButton.disabled = false;
+
+				moreButton.addEventListener('click', function() {
+					moreButton.disabled = true;
+					pagination.nextPage();
+				});
+			}
+		}
+	}
+
+	function createMarkers(places) {
+		var bounds = new google.maps.LatLngBounds();
+		var placesList = document.getElementById('places');
+
+		for (var i = 0, place; place = places[i]; i++) {
+			var image = {
+				url : place.icon,
+				size : new google.maps.Size(71, 71),
+				origin : new google.maps.Point(0, 0),
+				anchor : new google.maps.Point(17, 34),
+				scaledSize : new google.maps.Size(25, 25)
+			};
+
+			var marker = new google.maps.Marker({
+				map : map,
+				icon : image,
+				title : place.name,
+				position : place.geometry.location
+			});
+
+			placesList.innerHTML += '<li>' + place.name + '</li>';
+
+			bounds.extend(place.geometry.location);
+		}
+		map.fitBounds(bounds);
+	}
 </script>
 <style>
 #right-panel {

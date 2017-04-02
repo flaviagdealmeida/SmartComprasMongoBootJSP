@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -8,31 +8,42 @@
 
 </head>
 <body>
-<jsp:include page="menu.jsp"></jsp:include>
+	<jsp:include page="menu.jsp"></jsp:include>
 
-	
-	<div class="container">
-						<c:forEach var="listas" items="${itemLista}">
-							
-							<ul>
-								<li>${listas.nomeLista}</li>
-							</ul>
+<div class="container">
+		<div class="container-fluid" id="form-listagem">
+			<form  method="GET">
+				<fieldset>
+					<legend>Minhas Listas</legend>
+					<table class="table table-striped table-hover">
+						<thead>
+							<tr>
+								<th>Lista</th>
+								
+							</tr>
+						</thead>
+						<c:forEach var="item" items="${itemLista}">
+							<tbody>
+								<tr>
+									<td>${item.nomeLista}</td>
+									<td class="coluna"><button class="btn btn-danger btn-sm"
+											type="submit" value=${item.id } name="removerMarca">
+											<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+								<i class="fa fa-trash fa-lg" aria-hidden="true"></i></button></td>
+
+								</tr>
+							</tbody>
 						</c:forEach>
-		
-	
-	
-	
+					</table>
+				</fieldset>
+			</form>
+		</div>
 	</div>
 
 
-
-
-
-
-	
-	<jsp:include page="rodape.jsp"></jsp:include>
-	
-	
+	<footer>
+		<jsp:include page="rodape.jsp"></jsp:include>
+	</footer>
 </body>
 <!-- CSS -->
 <link rel="stylesheet" href="css/estiloprodutos.css" />
