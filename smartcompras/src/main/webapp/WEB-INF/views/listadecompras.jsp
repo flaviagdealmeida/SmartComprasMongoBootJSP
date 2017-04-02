@@ -14,7 +14,7 @@
 
 	<div class="container">
 
-		<form class="form-horizontal form-produtos" action="/additens" method="POST">
+		<form class="form-horizontal form-produtos" action="/addLista" method="POST">
 			<fieldset>
 				<legend>Lista Compras</legend>
 				<p>

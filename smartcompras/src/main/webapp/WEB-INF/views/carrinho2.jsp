@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ page import="br.org.smartcompras.models.*" %>
 <%@ page import="java.util.*" %>
 <!DOCTYPE html>
@@ -15,8 +16,10 @@
 	<div class="container">
 		<div class="container-fluid" id="form-listagem">
 			
-					<h3>Carrinho de Compras</h3>
-					<a href="listadecompras">Continuar Comprando</a>
+			
+					<h3>Analise de Preço</h3>
+					${item.nomeLista}
+<!-- 					<a href="listadecompras">Continuar Comprando</a> -->
 					<table class="table table-striped table-hover">
 						<thead>
 							<tr>
@@ -24,16 +27,29 @@
 								
 							</tr>
 						</thead>
-						<c:forEach var="item" items="${itemList}">
+						<c:forEach var="item" items="${item.produtos}" varStatus="status">
 							<tbody>
 								<tr>
-									<td>${item.produtos}</td>
+									<td>${item.produto}</td>
+									<td>${item.marca}</td>
+								</tr>
+								<tr>
+									<c:forEach var="itemPreco" items="${item.preco}" varStatus="index">
+										<tbody>
+											<tr>
+												<td>
+													<li>${itemPreco.supermercado} - ${itemPreco.valor}</li>
+												</td>
+												<td>
+												</td>
+											</tr>	
+										</tbody>
+									</c:forEach>	
 								</tr>
 							</tbody>
 						</c:forEach>
 						
 					</table>
-					<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
 				</div>
 	</div>
 

@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import br.org.smartcompras.models.Item;
 import br.org.smartcompras.models.PrecoMercado;
@@ -34,13 +36,12 @@ public class ItemController {
 	
 	@Autowired
 	ProdutoMongoRepository produtoRepository;
-	
-		
 	 
-	@RequestMapping(value = "/additens", method = RequestMethod.POST)
-	@CacheEvict(value="preLista", allEntries=true)
-	public String addProdutos(@ModelAttribute Item item) {
+	@RequestMapping(value = "/addLista", method = RequestMethod.POST)
+//	@CacheEvict(value="preLista", allEntries=true)
+	public String addProdutos(@ModelAttribute("item") Item item, RedirectAttributes redirectAttributes) {
 		itemRepository.save(item);
+		redirectAttributes.addFlashAttribute("item", item);
 		return "redirect:carrinho2";
 
 	}
@@ -51,16 +52,12 @@ public class ItemController {
 		return "redirect:listaitem";
 	}
 
-	@RequestMapping("/carrinho2")
-	public String itemList(Model model) {
-		model.addAttribute("itemList", itemRepository.findAll());
-		
-		model.addAttribute("produtoList", produtoRepository.findAll());
-		
-		
+	@RequestMapping(value = "/carrinho2", method = RequestMethod.GET)
+	public String itemList(@ModelAttribute Item item, RedirectAttributes redirectAttributes) {
+		redirectAttributes.addFlashAttribute("item", item);
 		return "carrinho2";
-		
 	}
+	
 	@RequestMapping(value="/minhaslistasnome",params="{nomeLista}",method = RequestMethod.POST)
 	public String myList(@ModelAttribute Item item, final HttpServletRequest req) {	
 		String itemId = String.valueOf((req.getParameter("nomeLista")));
@@ -99,11 +96,9 @@ public class ItemController {
 	}*/
 	
 	
+	@SuppressWarnings("unused")
 	public void itens(){
 		List<Item> itemBanco = new ArrayList<Item>();
-	
-		
-		
 		System.out.println(	itemRepository.findAll());
 		
 		
