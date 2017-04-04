@@ -17,24 +17,23 @@
 	<jsp:include page="menu.jsp"></jsp:include>
 	<div class="container">
 		<div class="container-fluid" id="form-listagem">
-			<form action="/delmarca" method="POST">
+			<form action="/listamarca" method="POST">
 				<fieldset>
 					<legend>Listagem de Marcas</legend>
 					<table class="table table-striped table-hover">
 						<thead>
 							<tr>
 								<th>Marca</th>
-								<th>Ação</th>
 							</tr>
 						</thead>
 						<c:forEach var="marca" items="${marcaLista}">
 							<tbody>
 								<tr>
-									<td>${marca.marca}</td>
-									<td class="coluna"><button class="btn btn-danger btn-sm"
-											type="submit" value=${marca.id } name="removerMarca">
-											<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
-								<i class="fa fa-trash fa-lg" aria-hidden="true"></i></button></td>
+									<td>${marca}</td>
+<!-- 									<td class="coluna"><button class="btn btn-danger btn-sm" -->
+<%-- 											type="submit" value=${marca.id } name="removerMarca"> --%>
+<%-- 											<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" /> --%>
+<!-- 								<i class="fa fa-trash fa-lg" aria-hidden="true"></i></button></td> -->
 
 								</tr>
 							</tbody>

@@ -5,7 +5,6 @@ import java.util.List;
 
 import org.bson.Document;
 import org.bson.conversions.Bson;
-import org.eclipse.jdt.internal.compiler.parser.Scanner;
 
 import com.mongodb.MongoClient;
 import com.mongodb.client.MongoCollection;

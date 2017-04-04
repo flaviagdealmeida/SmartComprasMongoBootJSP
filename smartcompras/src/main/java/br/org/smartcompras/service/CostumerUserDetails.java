@@ -37,21 +37,14 @@ public class CostumerUserDetails implements UserDetailsService {
 
 			String password = document.getString("senha");
 			String emailFind = document.getString("email");
-			String nome = document.getString("nome");
 			String autorizacao = document.getString("role");
 
-		//	List<String> authorities = (List<String>) document.get("authorities");
-
-			// MongoUserDetails mongoUserDetails = new
-			// MongoUserDetails(emailFind, password,authorities.toArray(new
-			// String[authorities.size()]));
 
 			authorities = new HashSet<>();
             authorities.add(new SimpleGrantedAuthority(autorizacao));
 			
 			MongoUserDetails mongoUserDetails = new MongoUserDetails(emailFind, password, authorities);
 
-			// authorities.toArray(new String[authorities.size()])
 
 			return mongoUserDetails;
 		} else {
