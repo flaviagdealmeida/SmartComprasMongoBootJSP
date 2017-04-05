@@ -112,7 +112,9 @@ public class SistemaController {
 		return "importararquivo";
 	}
 	
-	
-	
-	
+	@RequestMapping("usuarioCad")
+	public String usuarioCad() {
+		return "cadastroADM";
+	}
+
 }

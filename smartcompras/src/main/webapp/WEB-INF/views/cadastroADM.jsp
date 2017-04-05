@@ -45,8 +45,14 @@
 							placeholder="Email" name="email"/>
 					</div>
 				</div>
-						<input type="hidden" class="form-control" id="inpuRole"
-							placeholder="Permissão" name="role" value="ROLE_USER"/>
+				
+				<div class="form-group"  id="cad">
+					
+					<div class="col-lg-10">
+						<input type="text" class="form-control" id="inpuEmail"
+							placeholder="Permissão" name="role"/>
+					</div>
+				</div>
 				<div class="form-group"  id="cad">
 					
 					<div class="col-lg-10">

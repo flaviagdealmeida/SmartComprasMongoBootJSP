@@ -42,6 +42,7 @@
 			<div class="collapse navbar-collapse"
 				id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
+				<security:authorize access="hasAnyRole('ROLE_ADMIN', 'ROLE_GEST', 'ROLE_USER' )">
 					<li class="active"><a href="home">Home</a></li>
 					<li class="dropdown"><a href="#" class="dropdown-toggle"
 						data-toggle="dropdown" role="button" aria-haspopup="true"
@@ -71,7 +72,7 @@
 						<ul class="dropdown-menu" role="menu">
 							<li><a href="gastos">Gastos</a></li>
 						</ul></li>
-
+					</security:authorize>
 					<security:authorize access="hasAnyRole('ROLE_ADMIN', 'ROLE_GEST')">
 						<li class="dropdown"><a href="#" class="dropdown-toggle"
 							data-toggle="dropdown" role="button" aria-haspopup="true"
@@ -90,6 +91,8 @@
 										Predefinida</a></li>
 								<li><a href="listaspre">Listas Predefinida</a></li>
 								<li><a href="importararquivo">Importar CSV</a></li>
+								<li><a href="usuarioCad">Cadastro Usuario</a></li>
+								<li><a href="listausuario">Lista de Usuario</a></li>
 							</ul></li>
 					</security:authorize>
 					
@@ -103,13 +106,14 @@
 							</ul></li>
 					</security:authorize>
 				</ul>
+				<security:authorize access="hasAnyRole('ROLE_ADMIN', 'ROLE_GEST', 'ROLE_USER' )">
 
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="#"><c:out value="${pageContext.request.remoteUser}"></c:out></a></li>
 					<li><a href="logout"> Logout </a> <input type="hidden"
 						name="${_csrf.parameterName}" value="${_csrf.token}" /></li>
 				</ul>
-
+				</security:authorize>
 
 
 			</div>
