@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -22,9 +22,7 @@
 		
 		<div id="container" style="min-width: 85%; height: 400px; margin: 2%" th:fragment="maiorgasto"></div>
 
-	<footer>
-		<jsp:include page="rodape.jsp"></jsp:include>
-	</footer>
+	
 </body>
 <link rel="stylesheet" href="css/stylehome.css" />
 <link rel="stylesheet" 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />

@@ -17,13 +17,13 @@
 
 	<div class="container-fluid">
 		<div class="navbar-header">
-			<a class="navbar-brand" href="home">SmartCompras</a>
+			<a class="navbar-brand" href="/">SmartCompras</a>
 		</div>
 
 		<div class="collapse navbar-collapse"
 			id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="home">Home</a></li>
+				<li class="active"><a href="/">Home</a></li>
 			</ul>
 		</div>
 	</div>

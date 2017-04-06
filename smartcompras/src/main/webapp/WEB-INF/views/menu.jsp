@@ -42,18 +42,14 @@
 			<div class="collapse navbar-collapse"
 				id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
-				<security:authorize access="hasAnyRole('ROLE_ADMIN', 'ROLE_GEST', 'ROLE_USER' )">
-					<li class="active"><a href="home">Home</a></li>
+				<security:authorize access="hasAnyRole('ROLE_ADMIN', 'ROLE_USER' )">
+					<li class="active"><a href="/">Home</a></li>
 					<li class="dropdown"><a href="#" class="dropdown-toggle"
 						data-toggle="dropdown" role="button" aria-haspopup="true"
 						aria-expanded="false">Lista <span class="caret"></span></a>
 						<ul class="dropdown-menu">
 
-							<li><a tabindex="-1" href="listadecompras">Lista de Compras</a></li>
-
-							<li><a tabindex="-1" href="listadecompras2">Lista de
-									Compras</a></li>
-
+							<li><a tabindex="-1" href="listadecompras">Lista de Compras</a></li>							
 							<li><a tabindex="-1" href="minhaslistas">Minhas Listas</a></li>
 							<li class="dropdown-submenu"><a class="test" tabindex="-1"
 								href="#">Predefinidas <span class="caret"></span></a>
@@ -73,7 +69,7 @@
 							<li><a href="gastos">Gastos</a></li>
 						</ul></li>
 					</security:authorize>
-					<security:authorize access="hasAnyRole('ROLE_ADMIN', 'ROLE_GEST')">
+					<security:authorize access="hasRole('ROLE_ADMIN')">
 						<li class="dropdown"><a href="#" class="dropdown-toggle"
 							data-toggle="dropdown" role="button" aria-haspopup="true"
 							aria-expanded="false">Painel Administrativo <span

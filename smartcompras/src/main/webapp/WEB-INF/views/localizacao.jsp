@@ -6,15 +6,16 @@
 <head>
 <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 <meta charset="utf-8" />
+<title>SmartCompras</title>
 
 </head>
 <body>
 	<nav class="nav navbar-inverse graf" id="menu">
 		<a href="sistema"><button class="btn btn-primary" id="btnsistema">Sistema</button></a>
+		<button  class="btn btn-primary" onClick="localizarUsuario()">Minha Localização</button> <br>
 	</nav>
 	<input type="hidden" id="txtLatitude" name="txtLatitude" value="-22.9068467" />
 	 <input type="hidden" id="txtLongitude" name="txtLongitude" value="-43.17289649999998" />
-<button onClick="localizarUsuario()">Minha Localização</button> <br>
 
 	<div class="container"></div>
 
@@ -26,7 +27,7 @@
 		
 
 		
-		<button id="more">Mais Resultados</button>
+		<button id="more" class="btn btn-primary">Mais Resultados</button>
 
 	</div>
 
@@ -102,17 +103,20 @@ html, body {
 	right: 5px;
 	top: 60%;
 	margin-top: -195px;
-	height: 330px;
-	width: 200px;
+	height: 350px;
+	width: 230px;
 	padding: 5px;
 	z-index: 5;
 	border: 1px solid #999;
 	background: #fff;
+	border-radius: 8px;
+	margin-right: 5%;
 }
 
 h2 {
 	font-size: 22px;
 	margin: 0 0 5px 0;
+	text-align: center;
 }
 
 ul {
@@ -120,7 +124,7 @@ ul {
 	padding: 0;
 	margin: 0;
 	height: 271px;
-	width: 200px;
+	width: 215px;
 	overflow-y: scroll;
 }
 
