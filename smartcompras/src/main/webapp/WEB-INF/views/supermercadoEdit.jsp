@@ -11,62 +11,57 @@
 	
 	<div class="container">
 
-	<form class="form-horizontal cadastro" action="edit" method="post">
-	<input type="hidden" class="form-control" id="inputNome" name="id"  value="${supermercado.id}" />
+	<form class="form-horizontal cadastro" action="alteraSupermercado" method="post">
 			<fieldset>
-				<legend>Novo Supermercado</legend>
+	<input type="hidden" class="form-control" id="inputNome" name="id"  value="${supermercado.id}" />
+				<legend>Editar Supermercado</legend>
 				<div class="form-group"  id="cad">					
 					<div class="col-lg-10">
-						<input type="text" class="form-control" id="inputNome"  name="supermercado"
-							placeholder="Supermercado" value="${supermercado.supermercado}"/>
+						<input type="text" class="form-control" id="inputNome"  name="supermercado" value="${supermercado.supermercado}"/>
 					</div>
 				</div>
 				<div class="form-group"  id="cad">					
 					<div class="col-lg-10">
-						<input type="text" class="form-control" id="inputNome"  name="cnpj"
-							placeholder="CNPJ" />
+						<input type="text" class="form-control" id="inputNome"  name="cnpj" value="${supermercado.cnpj}"/>
 					</div>
 				</div>
 				<div class="form-group"  id="cad">					
 					<div class="col-lg-10">
-						<input type="text" class="form-control" id="inputNome"  name="contato"
-							placeholder="Responsavel Contato" />
+						<input type="text" class="form-control" id="inputNome"  name="contato" value="${supermercado.contato}"/>
 					</div>
 				</div>
 				<div class="form-group"  id="cad">					
 					<div class="col-lg-10">
-						<input type="email" class="form-control" id="inpuEmail"
-							placeholder="Email" name="email"/>
+						<input type="email" class="form-control" id="inpuEmail" name="email" value="${supermercado.email}"/>
 					</div>
 				</div>
 				
-				<input type="hidden" class="form-control" id="inpuRole"  name="permissao" value="ROLE_GEST"/>
-					
+				<div class="form-group"  id="cad">					
+					<div class="col-lg-10">
+				<input type="text" class="form-control" id="inpuRole"  name="permissao" value="${supermercado.permissao}"/>
+				</div>
+				</div>	
 				<div class="form-group"  id="cad">
 					
 					<div class="col-lg-10">
-						<input type="text" class="form-control" id="inputCep"
-							placeholder="CEP" name="cep"/>
+						<input type="text" class="form-control" id="inputCep" name="cep" value="${supermercado.cep}"/>
 					</div>
 				</div>
 				<div class="form-group"  id="cad">
 					
 					<div class="col-lg-10">
-						<input type="text" class="form-control" id="inputCompl"
-							placeholder="Complemento" name="complemento"/>
+						<input type="text" class="form-control" id="inputCompl" name="complemento" value="${supermercado.complemento}"/>
 					</div>
 				</div>
 				<div class="form-group"  id="cad">					
 					<div class="col-lg-10">
-						<input type="tel" class="form-control" id="inputFone"
-							placeholder="Telefone" name="telefone"/>
+						<input type="tel" class="form-control" id="inputFone" name="telefone" value="${supermercado.telefone}"/>
 					</div>
 				</div>
 				<div class="form-group" id="cad">
 					
 					<div class="col-lg-10">
-						<input type="password" class="form-control" id="inputSenha"
-							placeholder="Senha" name="senha"/>
+						<input type="password" class="form-control" id="inputSenha" name="senha" value="${supermercado.senha}"/>
 						
 					</div>
 				</div>
