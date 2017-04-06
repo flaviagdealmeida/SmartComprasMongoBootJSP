@@ -24,12 +24,16 @@
 						<thead>
 							<tr>
 								<th>Usuario</th>
+								<th>Email</th>
+								<th>Permissão</th>
 							</tr>
 						</thead>
 						<c:forEach var="usuario" items="${usuarioList}">
 							<tbody>
 								<tr>
 									<td>${usuario.nome}</td>
+									<td>${usuario.email}</td>
+									<td>${usuario.role}</td>
 									<td class="coluna"><button class="btn btn-danger btn-sm"
 											type="submit" value=${usuario.id } name="removerusuario">
 											<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />

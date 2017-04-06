@@ -3,7 +3,6 @@ package br.org.smartcompras.controller;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cache.annotation.Cacheable;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -27,7 +26,15 @@ public class UsuarioController implements UserDetailsService {
 	public String addusuario(Usuario usuario) {
 		
 		usuarioRepository.save(usuario);
-		return "redirect:home";
+		return "redirect:listausuario";
+
+	}
+	
+	@RequestMapping(value = "/adduserfinal", method = RequestMethod.POST)
+	public String adduserfinal(Usuario usuario) {
+		
+		usuarioRepository.save(usuario);
+		return "redirect:login";
 
 	}
 	

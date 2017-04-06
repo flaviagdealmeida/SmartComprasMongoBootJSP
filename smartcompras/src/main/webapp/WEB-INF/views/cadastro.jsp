@@ -14,7 +14,7 @@
 
 	<div class="container">
 
-		<form class="form-horizontal cadastro" action="addusuario" method="post">
+		<form class="form-horizontal cadastro" action="adduserfinal" method="post">
 			<fieldset>
 				<legend>Novo Usuário</legend>
 				<div class="form-group"  id="cad">

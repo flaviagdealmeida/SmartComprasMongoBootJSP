@@ -33,11 +33,9 @@
 									<td>${supermercado.supermercado}</td>
 									<td class="coluna">
 									<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
-									<button class="btn btn-danger btn-sm"
-											type="submit" value=${supermercado.id } name="removerSupermercado">
-											
+									<button class="btn btn-danger btn-sm" type="submit" value=${supermercado.id } name="removerSupermercado">		
 								<i class="fa fa-trash fa-lg" aria-hidden="true"></i></button></td>
-
+								<td><a href="editemp/${supermercado.id}">Edit</a></td> 
 								</tr>
 							</tbody>
 						</c:forEach>

@@ -117,4 +117,8 @@ public class SistemaController {
 		return "cadastroADM";
 	}
 
+	@RequestMapping("supermercadoEdit")
+	public String supermercadoEdit() {
+		return "supermercadoEdit";
+	}
 }

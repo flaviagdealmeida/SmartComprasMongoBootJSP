@@ -8,9 +8,11 @@ import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 
 import br.org.smartcompras.models.Supermercado;
 import br.org.smartcompras.repository.SupermercadoMongoRepository;
@@ -29,6 +31,12 @@ public class SupermercadoController {
 		return "redirect:supermercado";
 
 	}
+	
+	  @RequestMapping(value="/editemp/{id}")  
+	    public ModelAndView edit(@PathVariable String id){  
+	        Supermercado supermecado = supermercadoRepository.findOne(id); 
+	        return new ModelAndView("supermercadoEdit","command",supermecado);  
+	    }  
 
 	@RequestMapping(value = "/searchsupermercados")
 	public String search(@RequestParam String searchsupermercados) {
