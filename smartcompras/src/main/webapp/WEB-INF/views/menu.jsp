@@ -57,7 +57,7 @@
 									<c:forEach var="predefinida" items="${preListas}">
 										<li><a tabindex="-1" href="#">${predefinida.nomeLista}</a></li>
 									</c:forEach>
-									<li><a tabindex="-1" href="prechurrasco">Churrasco</a></li>
+									<li><a tabindex="-1" href="listaspre">Churrasco</a></li>
 								</ul></li>
 						</ul></li>
 					<li><a href="localizacao">Localização</a></li>
@@ -77,7 +77,6 @@
 							<ul class="dropdown-menu">
 								<li><a href="produto">Cadastro Produto</a></li>
 								<li><a href="listaproduto">Lista de Produtos</a></li>
-								<li><a href="marca">Cadastro Marca</a></li>
 								<li><a href="listamarca">Lista de Marca</a></li>
 								<security:authorize access="hasRole('ROLE_ADMIN')">
 									<li><a href="supermercado">Cadastro Supermercado</a></li>

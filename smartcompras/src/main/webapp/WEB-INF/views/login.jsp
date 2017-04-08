@@ -63,12 +63,7 @@
 					<input type="hidden" name="${_csrf.parameterName}" 	value="${_csrf.token}" />
 					
 				</div>
-				<div class="form-group" id="cad">
-					<div class="col-lg-8">
-						<a href="#">Esqueceu a senha? </a>
-					</div>
-				</div>
-
+				
 				<div class="form-group" id="cad">
 					<div class="col-lg-8">
 						<button type="submit" class="btn btn-warning btn-lg btn-block">Acessar</button>

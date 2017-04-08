@@ -14,8 +14,6 @@
 
 	<jsp:include page="menu.jsp"></jsp:include>
 	
-	
-		
 <!-- Trigger the modal with a button -->
 
 
@@ -32,11 +30,11 @@
       <div class="modal-body">
       		<ul>
       			<li>Hipermercado Extra </li>
-      			<dl>R$ 200,00</dl>
+      			<dl>R$ 141,90</dl>
       			<li>Prezunic Supermercado </li>
-      			<dl>R$ 180,00</dl>
+      			<dl>R$ 165,80</dl>
       			<li>Pão de Açúcar </li>
-      			<dl>R$ 165,00</dl>
+      			<dl>R$ 152,10</dl>
       		
       		</ul>
       </div>
@@ -47,18 +45,24 @@
 
   </div>
 </div>
+
 	
 	<div class="container">
+	
+			
+	
 		<div class="container-fluid" id="form-listagem">
 			
 			
-					<h3>Analise de Preço</h3>
-					${item.nomeLista}
+					<h3>Análise de Preço</h3>
+					<h2>${item.nomeLista}</h2> 
 <!-- 					<a href="listadecompras">Continuar Comprando</a> -->
 					<table class="table table-striped table-hover">
 						<thead>
 							<tr>
 								<th>Produto</th>
+								
+								<th><button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#myModal"><i class="fa fa-cart-plus" aria-hidden="true"></i> Total Lista</button></th>
 								
 							</tr>
 						</thead>
@@ -73,7 +77,7 @@
 										<tbody>
 											<tr>
 												<td>
-													<li>${itemPreco.supermercado} - ${itemPreco.valor}</li>
+													<li>${itemPreco.supermercado} - R$ ${itemPreco.valor}</li>
 												</td>
 												<td>
 												</td>
@@ -86,6 +90,8 @@
 						
 					</table>
 				</div>
+				
+				
 	</div>
 
 
@@ -94,6 +100,32 @@
 
 
 </body>
+
+<style>
+#mySidenav a {
+    position: absolute; /* Position them relative to the browser window */
+    left: -80px; /* Position them outside of the screen */
+    transition: 0.3s; /* Add transition on hover */
+    padding: 15px; /* 15px padding */
+    width: 100px; /* Set a specific width */
+    text-decoration: none; /* Remove underline */
+    font-size: 20px; /* Increase font size */
+    color: white; /* White text color */
+    border-radius: 0 5px 5px 0; /* Rounded corners on the top right and bottom right side */
+}
+
+#mySidenav a:hover {
+    left: 0; /* On mouse-over, make the elements appear as they should */
+}
+
+/* The about link: 20px from the top with a green background */
+#about {
+    top: 20px;
+    background-color: #4CAF50;
+}
+
+</style>
+
 
 <!-- CSS -->
 <link rel="stylesheet" href="css/estiloprodutos.css" />

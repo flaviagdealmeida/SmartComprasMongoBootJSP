@@ -1,15 +1,13 @@
 $(function() {
 
-		var colors = Highcharts.getOptions().colors, categories = [ 'Cereais',
-				'Bebidas', 'Higiene', 'Limpeza', 'Carnes' ], name = 'Ocultar Dados', data = [
+		var colors = Highcharts.getOptions().colors, categories = [ 'Bebidas','Biscoitos','Bomboniere','Carne Aves','Carne Bovina','Carne Suína','Peixes e frutos do mar','Cereais','Congelados','Conservas','Higiene','Hortifrutigrangeiro','Laticíneos','Limpeza','Massas','Salgados','Condimentos' ], name = 'Ocultar Dados', data = [
 				{
 					y : 55.11,
 					color : colors[0],
 					drilldown : {
 						name : 'Cereais versions',
-						categories : [ 'Cereais 6.0', 'Cereais 7.0', 'Cereais 8.0',
-								'Cereais 9.0' ],
-						data : [ 10.85, 7.35, 33.06, 2.81 ],
+						categories : [ 'Açucar Refinado', 'Arroz Tio João', 'Farinha de Mandioca'],
+						data : [ 10.85, 7.35, 2.81 ],
 						color : colors[0]
 					}
 				},

@@ -23,22 +23,24 @@
 						size="40" />
 				</p>
 				 
-				<div class="checkbox">
+				<div class="checkbox" widht="800px">
 					
-						<table class="table table-striped table-hover">
+						<table class="table table-striped table-hover"  id="titulos">
 							<thead>
 								<tr>
-									<th>Item</th>
-									<th>Produto</th>
-									<th>Marca</th>
+									<th class="tit">Item</th>
+									<th width="200px"><center>Imagem</center></th>
+									<th  width="900px">Produto</th>
+									<th class="tit">Marca</th>
 								</tr>
 							</thead>
 								<c:forEach var="produto" items="${produtoList}">
 							<tbody>
 									<tr>
-										<td><center><input type="checkbox" value=${produto.id} id="produtos" name="produtos"/></center></td>
-										<td>${produto.produto}</td>
-										<td>${produto.marca}</td>
+										<td class="tit"><center><input type="checkbox" value=${produto.id} id="produtos" name="produtos"/></center></td>
+										<td><img class="imgtable" src=${produto.imgProduto} alt=${produto.produto} /></td>
+										<td class="tit">${produto.produto}</td>
+										<td class="tit">${produto.marca}</td>
 									</tr>
 								</c:forEach>
 							</tbody>
@@ -48,7 +50,7 @@
 				</div>
 
 				<div class="col-lg-10 col-lg-offset-4 botoes">
-					<input type="submit" class="btn btn-primary" value="Cadastrar" />
+					<input type="submit" class="btn btn-primary" value="Criar Lista" />
 					<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
 					<button type="reset" class="btn btn-warning">Cancelar</button>
 				</div>

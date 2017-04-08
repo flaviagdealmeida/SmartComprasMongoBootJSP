@@ -59,7 +59,7 @@ public class ItemController {
 	}
 
 	@RequestMapping("/minhaslistas")
-	public String itemLista(@ModelAttribute Item item, Model model) {
+	public String itemLista(Model model) {
 		model.addAttribute("itemLista", itemRepository.findAll());
 
 		return "minhaslistas";
@@ -72,7 +72,7 @@ public class ItemController {
 
 		itemRepository.delete(itemId);
 
-		return "redirect:carrinho2";
+		return "redirect:minhaslistas";
 	}
 
 	/*

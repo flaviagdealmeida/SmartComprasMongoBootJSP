@@ -60,7 +60,11 @@
 						<option value=${supermercado.id}>${supermercado.supermercado}</option>
 					</c:forEach>
 					</select>
-				
+				</div>
+				<div class="form-group">
+					<label class="control-label" for="produto">Preço</label> <input
+						class="form-control" type="text" id="produto" name="valor"
+						size="40" />
 
 				</div>
 				
@@ -77,7 +81,7 @@
 						<option>Carne Aves</option>
 						<option>Carne Bovina</option>
 						<option>Carne Suína</option>
-						<option>Carne Peixes e frutos do mar</option>
+						<option>Peixes e frutos do mar</option>
 						<option>Cereais</option>
 						<option>Congelados</option>
 						<option>Conservas</option>
